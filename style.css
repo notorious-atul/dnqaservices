@@ -169,3 +169,84 @@ h1 {
         padding-top: 100px;
         font-size: 20px;
     }}
+
+    @media screen and (max-width: 768px) {
+        /* Adjust styles for smaller screens */
+    
+        /* Header styles */
+        .about-section {
+            padding-top: 100px;
+            font-size: 20px;
+        }}
+        @media screen and (max-width: 768px) {
+            /* Adjust styles for smaller screens */
+        
+            /* Header styles */
+            .services-section{
+                padding-top: 100px;
+                font-size: 20px;
+            }}
+            @media screen and (max-width: 768px) {
+                /* Adjust styles for smaller screens */
+            
+                /* Header styles */
+                .contact-info {
+                    padding-top: 100px;
+                    font-size: 20px;
+                }}
+                @media screen and (max-width: 768px) {
+                    /* Adjust styles for smaller screens */
+                
+                    /* Header styles */
+                    .contact-section  {
+                        padding-top: 100px;
+                        font-size: 20px;
+                    }}
+                    @media screen and (max-width: 768px) {
+                        /* Adjust styles for smaller screens */
+                    
+                        /* Header styles */
+                        .sdet-services {
+                            padding-top: 100px;
+                            font-size: 20px;
+                        }}
+                        @media screen and (max-width: 768px) {
+                            /* Adjust styles for smaller screens */
+                        
+                            /* Header styles */
+                            .methodology {
+                                padding-top: 100px;
+                                font-size: 20px;
+                            }}  
+                            @media screen and (max-width: 768px) {
+                                /* Adjust styles for smaller screens */
+                            
+                                /* Header styles */
+                                .testing-type  {
+                                    padding-top: 100px;
+                                    font-size: 20px;
+                                }}
+                                @media screen and (max-width: 768px) {
+                                    /* Adjust styles for smaller screens */
+                                
+                                    /* Header styles */
+                                    .development-section  {
+                                        padding-top: 100px;
+                                        font-size: 20px;
+                                    }}
+                                    @media screen and (max-width: 768px) {
+                                        /* Adjust styles for smaller screens */
+                                    
+                                        /* Header styles */
+                                        .motivational-section  {
+                                            padding-top: 100px;
+                                            font-size: 20px;
+                                        }}
+                                        @media screen and (max-width: 768px) {
+                                            /* Adjust styles for smaller screens */
+                                        
+                                            /* Header styles */
+                                            .services-section  {
+                                                padding-top: 100px;
+                                                font-size: 20px;
+                                            }}      
