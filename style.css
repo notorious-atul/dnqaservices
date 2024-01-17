@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+title {
+    color: black;
+}
+.header {
+    padding-top: 200px;
+    background-color: black;
+    /*background-image: url('wolf.jpg');*/
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.tab {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.tab:hover {
+    background-color: grey; /* Darken the background on hover if desired */
+}
+
+/* ... Existing styles ... */
+
+.about-section {
+    background-color: white;
+    color: black;
+    font-size: 50px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.about-section h2 {
+    color: black;
+    
+}
+
+/* ... Existing styles ... */
+
+.services-section {
+    background-color: white;
+    color: black;
+    font-size: 50px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.services-section h3 {
+    color: black;
+    margin-bottom: 15px;
+}
+
+/* ... Existing styles ... */
+
+.motivational-section {
+    background-color: #00bcd4; /* Light blue color */
+    color: white;
+    font-size: 50px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.motivational-section h3 {
+    color: black;
+    margin-bottom: 15px;
+}
+
+/* ... Existing styles ... */
+
+.footer-section {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-section p {
+    margin: 0;
+}
+
+.footer-section img {
+    max-width: 100px; /* Adjust the maximum width of your logo as needed */
+    margin-top: 10px; /* Add margin above the logo */
+}
+
+/* ... Existing styles ... */
+.development-section {
+    background-color: white;
+    color: black;
+    font-size: 50px;
+    padding: 20px;
+    margin-top: 20px;
+
+}
+.testing-type {
+    background-color: white;
+    color: black;
+    font-size: 50px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.methodology{
+    background-color: white;
+    color: black;
+    font-size: 50px;
+    padding: 20px;
+    margin-top: 20px; 
+}
+
+.sdet-services {
+    background-color: white;
+    color: black;
+    font-size: 50px;
+    padding: 20px;
+    margin-top: 20px;  
+}
+/* ... Existing styles ... */
+
+/* Contact Section Styles */
+.contact-section {
+    background-color: white;
+    color: black;
+    font-size: 50px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.contact-section h3 {
+    color: black;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    margin-top: 10px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* ... Existing styles ... */
