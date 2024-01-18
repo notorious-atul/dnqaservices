@@ -10,13 +10,15 @@
 <body>
     <div class="header">
         <h1>D&QA Services</h1>
-        <div class="tabs">
-            <a href="development.html" class="tab">Development</a>
-            <a href="qaservices.html" class="tab">QA Services</a>
-            <a href="contactus.html" class="tab">Contact us</a>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        <div class="tabs" id="tabs">
+            <a href="#Development" class="tab" id="tab">Development</a>
+            <a href="#QAServices" class="tab" id="tab">QA Services</a>
+            <a href="#Contactus" class="tab" id="tab">Contact us</a>
+            <a href="#about" class="tab about-icon" id="tab" title="About Us">Back to top page</a> <!--&#9432; = information icon-->
         </div>
     </div>
-    <div class="about-section">
+    <div class="about-section" id ="about">
         <h2>About Us</h2>
         <p>Welcome to D&QA Services, your partner in software development and quality assurance. We specialize in providing top-notch solutions to meet your business needs. Our experienced team is dedicated to delivering high-quality software and ensuring the reliability and efficiency of your applications through rigorous testing processes.</p>
     </div>
@@ -37,12 +39,76 @@
         <h3>Dream Big, Achieve Bigger with D&QA Services!</h3>
         <p>At D&QA Services, we believe in turning dreams into reality. Dream big, and let us be the driving force behind your success. Our dedicated team is committed to providing innovative solutions, empowering you to achieve your business goals. Join us on the journey to excellence, and together, we can make your aspirations a reality.</p>
          </div>
+        <div class="development-section" id="Development">
+            <h3>Development Services</h3>
+            <p>Our development services are designed to bring your ideas to life. With a focus on innovation and quality, we offer a range of solutions to meet your specific needs.</p>
+        
+    
+            <div class="service">
+                <h4>SAAS Project Development</h4>
+                <p>Looking to launch your own Software as a Service (SAAS) project? Our expert developers can help you design, develop, and deploy your SAAS solution, ensuring scalability, security, and user satisfaction.</p>
+            </div>
+    
+            <div class="service">
+                <h4>Blog Making and Content Management</h4>
+                <p>Engage your audience with a well-designed blog. From creating the initial layout to implementing content management systems, we provide comprehensive blog making services. Manage your content easily and effectively.</p>
+    
+            <!-- Add more services as needed -->
+    
+            <p>At D&QA Services, we go beyond traditional development. We strive to understand your business goals and deliver tailored solutions that drive success. Whether you're starting a new project or enhancing an existing one, our development team is here to turn your vision into reality.</p>
+        </div></div>
+        <div class="testing-type" id="QAServices">
+            <h4>QA Services</h4>
+            <ul>
+                <li><strong>Functional Testing:</strong> Ensuring that each function of the software application operates according to the specified requirements.</li>
+                <li><strong>Performance Testing:</strong> Evaluating the responsiveness and stability of the software under varying workloads.</li>
+                <li><strong>Security Testing:</strong> Identifying vulnerabilities and ensuring that the software is secure against unauthorized access and attacks.</li>
+                <li><strong>Usability Testing:</strong> Assessing the user-friendliness and overall user experience of the software.</li>
+                <!-- Add more testing types as needed -->
+            </ul>
+        </div>
+    
+        <div class="methodology">
+            <h4>Testing Methodology</h4>
+            <p>We follow an agile testing methodology, integrating testing processes seamlessly into the development lifecycle. This ensures early detection of issues and allows for rapid and effective resolution.</p>
+        </div>
+    
+        <div class="sdet-services">
+            <h4>SDET Services</h4>
+            <p>Our Software Development Engineers in Test (SDETs) contribute to the development process by creating automated test scripts, ensuring efficient and reliable testing throughout the software lifecycle.</p>
+        <p>Partner with us for robust testing solutions that guarantee the quality and performance of your software.</p>
+    </div>
+        <div class="contact-section" id="Contactus">
+            <h3>Contact Us</h3>
+            <p>For inquiries and support, feel free to reach out to us:</p>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:atul4055@gmail.com">atul4055@gmail.com</a></p>
+                <p>office location: to be implemented</p>
+            </div></div>
    
     <footer class="footer-section">
         <p>&copy; 2024 D&QA Services. All rights reserved.</p>
         <!--<img src="path/to/your/logo.png" alt="Company Logo">-->
     </footer>
-    
-    
+
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            var tabs = document.getElementById('tabs');
+            tabs.classList.toggle('show');
+        });
+        // Smooth scroll behavior for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                var tabs = document.getElementById('tabs');
+                tabs.classList.remove('show');
+                });
+            });
+            
+    </script>
 </body>
 </html>

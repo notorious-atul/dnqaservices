@@ -1,15 +1,14 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
 }
 
-title {
-    color: black;
-}
+
 .header {
     padding-top: 200px;
     background-color: black;
@@ -18,6 +17,9 @@ title {
     padding: 20px;
     font-size: 30px;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Ensure the header stays above other elements */
 }
 
 h1 {
@@ -47,8 +49,9 @@ h1 {
     background-color: white;
     color: black;
     font-size: 50px;
-    padding: 20px;
-    margin-top: 20px;
+    padding-top: 250px;
+    margin-left: 20px;
+    margin-right: 10px;
 }
 
 .about-section h2 {
@@ -64,6 +67,7 @@ h1 {
     font-size: 50px;
     padding: 20px;
     margin-top: 20px;
+    margin-right: 10px;
 }
 
 .services-section h3 {
@@ -78,7 +82,7 @@ h1 {
     color: white;
     font-size: 50px;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .motivational-section h3 {
@@ -109,16 +113,19 @@ h1 {
     background-color: white;
     color: black;
     font-size: 50px;
-    padding: 20px;
-    margin-top: 20px;
+    padding-top: 250px;
+    margin-left: 20px;
+    margin-right: 10px;
 
 }
 .testing-type {
     background-color: white;
     color: black;
     font-size: 50px;
-    padding: 20px;
-    margin-top: 20px;
+    padding-top: 250px;
+    margin-left: 20px;
+    margin-right: 10px;
+   
 }
 
 .methodology{
@@ -143,8 +150,9 @@ h1 {
     background-color: white;
     color: black;
     font-size: 50px;
-    padding: 20px;
-    margin-top: 20px;
+    padding-top: 100px;
+    margin-left: 20px;
+    margin-right: 10px;
 }
 
 .contact-section h3 {
@@ -160,14 +168,21 @@ h1 {
     margin-bottom: 10px;
 }
 
+.menu-icon {
+    display: none;
+}
+
 /* ... Existing styles ... */
 @media screen and (max-width: 768px) {
     /* Adjust styles for smaller screens */
 
     /* Header styles */
     .header {
-        padding-top: 100px;
-        font-size: 20px;
+        padding-top: 10px;
+        font-size:15px;
+        width: 100%;
+        z-index: 1000; /* Ensure the header stays above other elements */
+        position: fixed;
     }}
 
     @media screen and (max-width: 768px) {
@@ -249,4 +264,55 @@ h1 {
                                             .services-section  {
                                                 padding-top: 100px;
                                                 font-size: 20px;
-                                            }}      
+                                            }}
+                                            @media screen and (max-width: 768px) {
+                                                /* Adjust styles for smaller screens */
+                                            
+                                                /* Header styles */
+                                                .about-section  {
+                                                    padding-top: 100px;
+                                                    font-size: 20px;
+                                                }}  
+                                                @media only screen and (max-width: 768px) {
+                                                    .tabs {
+                                                        display: none;
+                                                        flex-direction: column;
+                                                        align-items: center;
+                                                        width: 100%;
+                                                        position: absolute;
+                                                        top: 100px; /* Adjust according to your header height */
+                                                        left: 0;
+                                                        background-color: #333;
+                                                        z-index: 1;
+                                                    }
+                                                
+                                                    .tabs.show {
+                                                        display: flex;
+                                                    }
+                                                
+                                                    .tab {
+                                                        padding: 15px;
+                                                        text-align: center;
+                                                        color: white;
+                                                        text-decoration: none;
+                                                        width: 100%;
+                                                        box-sizing: border-box;
+                                                        margin-top: 10px;
+                                                        border-bottom: 1px solid #555;
+                                                    }
+                                                
+                                                    .header {
+                                                        position: fixed;
+                                            
+                                                    }
+                                                
+                                                    .menu-icon {
+                                                        display: block;
+                                                        position: absolute;
+                                                        top: 60px;
+                                                        right: 200px;
+                                                        font-size: 40px;
+                                                        color: white;
+                                                        cursor: pointer;
+                                                    }}
+                                                     
