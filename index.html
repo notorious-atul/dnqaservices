@@ -85,6 +85,14 @@
                 <p>Email: <a href="mailto:atul4055@gmail.com">atul4055@gmail.com</a></p>
                 <p>office location: to be implemented</p>
             </div></div>
+            <div class = "form" id="form"></div><form id="bookNowForm" action="/submit" method="post">
+                <label for="email">Email:</label>
+                <input placeholder="Enter Your Email" type="email" id="email" name="email" required>
+        
+                <!-- Add more form fields as needed -->
+        
+                <button type="submit">Schedule a Demo</button>
+            </form></div>
    
     <footer class="footer-section">
         <p>&copy; 2024 D&QA Services. All rights reserved.</p>
@@ -92,6 +100,12 @@
     </footer>
 
     <script>
+        function submitForm() {
+            // You can perform client-side validation here if needed
+
+            // Submit the form using JavaScript
+            document.getElementById('bookNowForm').submit();
+        }
         document.getElementById('menu-icon').addEventListener('click', function () {
             var tabs = document.getElementById('tabs');
             tabs.classList.toggle('show');
@@ -107,6 +121,7 @@
                 var tabs = document.getElementById('tabs');
                 tabs.classList.remove('show');
                 });
+            
             });
             
     </script>
