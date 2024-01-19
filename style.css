@@ -10,30 +10,35 @@ a {
 
 
 .header {
-    padding-top: 200px;
     background-color: black;
     /*background-image: url('wolf.jpg');*/
     color: white;
-    padding: 20px;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     position: fixed;
     width: 100%;
-    z-index: 1000; /* Ensure the header stays above other elements */
+    top: 0;
+    left: 0;
+    /* z-index: 2; Ensure the header stays above other elements */
 }
 
 h1 {
     color: white;
+    display: inline-block;
+    margin-right: 20px;
 }
 
 .tabs {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    position: relative;
+    border-bottom: 5px solid #3498db;
+    
 }
 
 .tab {
-    padding: 10px;
+    padding: 2px;
     background-color: black;
     color: white;
     cursor: pointer;
@@ -48,10 +53,16 @@ h1 {
 .about-section {
     background-color: white;
     color: black;
-    font-size: 50px;
-    padding-top: 250px;
+    font-size: 40px;
+    padding-top: 140px;
     margin-left: 20px;
     margin-right: 10px;
+}
+
+.services-section h2 {
+    font-size: 100px;
+    color: black;
+    border-bottom:5px solid green ;
 }
 
 .about-section h2 {
@@ -64,7 +75,7 @@ h1 {
 .services-section {
     background-color: white;
     color: black;
-    font-size: 50px;
+    font-size: 40px;
     padding: 20px;
     margin-top: 20px;
     margin-right: 10px;
@@ -80,7 +91,7 @@ h1 {
 .motivational-section {
     background-color: #00bcd4; /* Light blue color */
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     padding: 20px;
     margin-top: 10px;
 }
@@ -88,6 +99,31 @@ h1 {
 .motivational-section h3 {
     color: black;
     margin-bottom: 15px;
+}
+
+.development-section {
+    background-color: white;
+    color: black;
+    font-size: 40px;
+    padding-top: 120px;
+    margin-left: 20px;
+    margin-right: 10px;
+
+}
+.development-section h3 {
+    border-bottom:5px solid green ;
+    font-size: 100px;
+}
+
+.development-section-two {
+    font-size: 40px;
+    background-color: white;
+    color: black;
+    font-size: 40px;
+    padding-top: 120px;
+    margin-left: 20px;
+    margin-right: 10px;
+ 
 }
 
 /* ... Existing styles ... */
@@ -108,30 +144,32 @@ h1 {
     margin-top: 10px; /* Add margin above the logo */
 }
 
-/* ... Existing styles ... */
-.development-section {
-    background-color: white;
-    color: black;
-    font-size: 50px;
-    padding-top: 250px;
-    margin-left: 20px;
-    margin-right: 10px;
-
-}
 .testing-type {
     background-color: white;
     color: black;
-    font-size: 50px;
-    padding-top: 250px;
+    font-size: 40px;
+    padding-top: 20px;
     margin-left: 20px;
     margin-right: 10px;
    
+}
+.qaservices {
+    background-color: white;
+    color: black;
+    padding-top: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.qaservices h4 {
+    font-size: 100px;
+    border-bottom: 5px solid #3498db;
 }
 
 .methodology{
     background-color: white;
     color: black;
-    font-size: 50px;
+    font-size: 40px;
     padding: 20px;
     margin-top: 20px; 
 }
@@ -139,7 +177,7 @@ h1 {
 .sdet-services {
     background-color: white;
     color: black;
-    font-size: 50px;
+    font-size: 40px;
     padding: 20px;
     margin-top: 20px;  
 }
@@ -149,15 +187,18 @@ h1 {
 .contact-section {
     background-color: white;
     color: black;
-    font-size: 50px;
-    padding-top: 100px;
+    font-size: 40px;
     margin-left: 20px;
     margin-right: 10px;
+    
 }
 
 .contact-section h3 {
     color: black;
     margin-bottom: 15px;
+    font-size: 100px;
+    border-bottom: 5px solid blueviolet;
+   
 }
 
 .contact-info {
@@ -166,6 +207,15 @@ h1 {
 
 .contact-info p {
     margin-bottom: 10px;
+}
+
+.lastbutton {
+    padding-top: 10px;
+    font-size: 40px;
+    padding-left: 70%;
+    padding-bottom: 0;
+    border-radius: 20px;
+    border-bottom: 5px solid rgb(218, 189, 144);
 }
 
 .menu-icon {
@@ -184,21 +234,30 @@ h1 {
         z-index: 1000; /* Ensure the header stays above other elements */
         position: fixed;
     }}
-
+    
     @media screen and (max-width: 768px) {
         /* Adjust styles for smaller screens */
     
         /* Header styles */
-        .about-section {
-            padding-top: 100px;
-            font-size: 20px;
+        .footer-section {
+            padding-top: 10px;
+            font-size:10px;
+            width: 100%;
+        }}
+    @media screen and (max-width: 768px) {
+        /* Adjust styles for smaller screens */
+    
+        /* Header styles */
+        .about-section h2 {
+            padding-top: 60px;
+            font-size: 30px;
         }}
         @media screen and (max-width: 768px) {
             /* Adjust styles for smaller screens */
         
             /* Header styles */
             .services-section{
-                padding-top: 100px;
+                padding-top: 20px;
                 font-size: 20px;
             }}
             @media screen and (max-width: 768px) {
@@ -206,23 +265,31 @@ h1 {
             
                 /* Header styles */
                 .contact-info {
-                    padding-top: 100px;
+                    padding-top: 20px;
                     font-size: 20px;
                 }}
                 @media screen and (max-width: 768px) {
                     /* Adjust styles for smaller screens */
                 
                     /* Header styles */
-                    .contact-section  {
-                        padding-top: 100px;
-                        font-size: 20px;
+                    .contact-section h3 {
+                        padding-top: 20px;
+                        font-size: 30px;
                     }}
                     @media screen and (max-width: 768px) {
                         /* Adjust styles for smaller screens */
                     
                         /* Header styles */
+                        .contact-section {
+                            padding-top: 20px;
+                            font-size: 20px;
+                        }}
+                    @media screen and (max-width: 768px) {
+                        /* Adjust styles for smaller screens */
+                    
+                        /* Header styles */
                         .sdet-services {
-                            padding-top: 100px;
+                            padding-top: 20px;
                             font-size: 20px;
                         }}
                         @media screen and (max-width: 768px) {
@@ -230,7 +297,7 @@ h1 {
                         
                             /* Header styles */
                             .methodology {
-                                padding-top: 100px;
+                                padding-top: 20px;
                                 font-size: 20px;
                             }}  
                             @media screen and (max-width: 768px) {
@@ -238,31 +305,48 @@ h1 {
                             
                                 /* Header styles */
                                 .testing-type  {
-                                    padding-top: 100px;
+                                    padding-top: 20px;
                                     font-size: 20px;
                                 }}
                                 @media screen and (max-width: 768px) {
                                     /* Adjust styles for smaller screens */
                                 
                                     /* Header styles */
+                                    .qaservices h4{
+                                        padding-top: 20px;
+                                        font-size: 30px;
+                                    }}
+                                @media screen and (max-width: 768px) {
+                                    /* Adjust styles for smaller screens */
+                                
+                                    /* Header styles */
                                     .development-section  {
-                                        padding-top: 100px;
+                                        padding-top: 20px;
                                         font-size: 20px;
                                     }}
                                     @media screen and (max-width: 768px) {
                                         /* Adjust styles for smaller screens */
                                     
                                         /* Header styles */
-                                        .motivational-section  {
-                                            padding-top: 100px;
+                                        .development-section-two  {
+                                            padding-top: 20px;
                                             font-size: 20px;
+                                        }}
+                                    @media screen and (max-width: 768px) {
+                                        /* Adjust styles for smaller screens */
+                                    
+                                        /* Header styles */
+                                        .motivational-section  {
+                                            padding-top: 20px;
+                                            font-size: 20px;
+                                            width: 100%;
                                         }}
                                         @media screen and (max-width: 768px) {
                                             /* Adjust styles for smaller screens */
                                         
                                             /* Header styles */
                                             .services-section  {
-                                                padding-top: 100px;
+                                                padding-top: 20px;
                                                 font-size: 20px;
                                             }}
                                             @media screen and (max-width: 768px) {
@@ -270,9 +354,54 @@ h1 {
                                             
                                                 /* Header styles */
                                                 .about-section  {
-                                                    padding-top: 100px;
+                                                    padding-top: 20px;
                                                     font-size: 20px;
-                                                }}  
+                                                }} 
+                                                @media screen and (max-width: 768px) {
+                                                    .input-container {
+                                                        padding-left: 20px;
+                                                    
+                                                    }
+                                                
+                                                    #email {
+                                                        flex: 2;
+                                                    }
+                                                
+                                                    #bookNowForm button {
+                                                        flex: 1;
+                                                        font-size: 0px;
+                                                    }
+                                                
+                                                    /* Add any other styles for smaller screens if needed */
+                                                }                                              
+                                                
+                                                        @media screen and (max-width: 768px) {
+                                                            /* Adjust styles for smaller screens */
+                                                        
+                                                            /* Header styles */
+                                                            .development-section h3 {
+                                                                padding-top: 20px;
+                                                                font-size: 30px;
+                                                            }} 
+                                                            @media screen and (max-width: 768px) {
+                                                                /* Adjust styles for smaller screens */
+                                                            
+                                                                /* Header styles */
+                                                                .services-section h2  {
+                                                                    padding-top: 20px;
+                                                                    font-size: 30px;
+                                                                }}  
+                                                                @media screen and (max-width: 768px) {
+                                                                    /* Adjust styles for smaller screens */
+                                                                
+                                                                    /* Header styles */
+                                                                    .lastbutton {
+                                                                        padding-top: 20px;
+                                                                        font-size: 10px;
+                                                                        padding-left: 160px;
+                                                                        padding-bottom: 20px;
+                                                                        border-bottom: none;
+                                                                    }}    
                                                 @media only screen and (max-width: 768px) {
                                                     .tabs {
                                                         display: none;
@@ -280,10 +409,10 @@ h1 {
                                                         align-items: center;
                                                         width: 100%;
                                                         position: absolute;
-                                                        top: 100px; /* Adjust according to your header height */
+                                                        top: 70px; /* Adjust according to your header height */
                                                         left: 0;
                                                         background-color: #333;
-                                                        z-index: 1;
+                                                        margin-top: 0;
                                                     }
                                                 
                                                     .tabs.show {
@@ -297,7 +426,7 @@ h1 {
                                                         text-decoration: none;
                                                         width: 100%;
                                                         box-sizing: border-box;
-                                                        margin-top: 10px;
+                                                        margin-top: 0;
                                                         border-bottom: 1px solid #555;
                                                     }
                                                 
@@ -309,10 +438,39 @@ h1 {
                                                     .menu-icon {
                                                         display: block;
                                                         position: absolute;
-                                                        top: 60px;
-                                                        right: 200px;
+                                                        top: 20px;
+                                                        right: 20px;
                                                         font-size: 40px;
                                                         color: white;
                                                         cursor: pointer;
                                                     }}
-                                                     
+/* Add this style for the input container */
+.input-container {
+    display: flex;
+    gap: 0; /* Remove the gap between input and button */
+    justify-content: center;
+    padding-bottom: 2px;
+}
+
+/* Style for the email input */
+#email {
+    border-radius: 30px 0 0 30px; /* Rounded corners on the left */
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #ccc; /* Add a border for better visibility */
+    width: 20%; /* Adjust the width as needed */
+    height: 100px;
+    font-size: 30px;
+    max-width: none;
+    max-height: none;
+}
+
+/* Style for the Book Now button */
+#bookNowForm button {
+    border-radius: 0 30px 30px 0; /* Rounded corners on the right */
+    background-color: black; /* Set the background color to black */
+    color: white; /* Set text color to white */
+    padding: 10px; /* Adjust padding as needed */
+    cursor: pointer;
+    width: 20%;
+    font-size: 30px;
+}
