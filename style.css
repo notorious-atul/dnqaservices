@@ -218,7 +218,7 @@ a {
 }
 
 /* ... Existing styles ... */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 300px) and (max-width: 768px) {
     /* Adjust styles for smaller screens */
 
     /* Header styles */
@@ -229,8 +229,15 @@ a {
         z-index: 1000; /* Ensure the header stays above other elements */
         position: fixed;
     }}
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+        /* Adjust styles for smaller screens */
     
-    @media screen and (max-width: 768px) {
+        /* Header styles */
+        .header h1 {
+            margin-right: 20%;
+        }}
+    
+    @media screen and (min-width: 300px) and (max-width: 768px) {
         /* Adjust styles for smaller screens */
     
         /* Header styles */
@@ -239,7 +246,7 @@ a {
             font-size:10px;
             width: 100%;
         }}
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 300px) and (max-width: 768px) {
         /* Adjust styles for smaller screens */
     
         /* Header styles */
@@ -247,7 +254,7 @@ a {
             padding-top: 60px;
             font-size: 30px;
         }}
-        @media screen and (max-width: 768px) {
+        @media screen and (min-width: 300px) and (max-width: 768px) {
             /* Adjust styles for smaller screens */
         
             /* Header styles */
@@ -255,7 +262,7 @@ a {
                 padding-top: 20px;
                 font-size: 20px;
             }}
-            @media screen and (max-width: 768px) {
+            @media screen and (min-width: 300px) and (max-width: 768px) {
                 /* Adjust styles for smaller screens */
             
                 /* Header styles */
@@ -263,7 +270,7 @@ a {
                     padding-top: 20px;
                     font-size: 20px;
                 }}
-                @media screen and (max-width: 768px) {
+                @media screen and (min-width: 300px) and (max-width: 768px) {
                     /* Adjust styles for smaller screens */
                 
                     /* Header styles */
@@ -271,7 +278,7 @@ a {
                         padding-top: 20px;
                         font-size: 30px;
                     }}
-                    @media screen and (max-width: 768px) {
+                    @media screen and (min-width: 300px) and (max-width: 768px) {
                         /* Adjust styles for smaller screens */
                     
                         /* Header styles */
@@ -279,7 +286,7 @@ a {
                             padding-top: 20px;
                             font-size: 20px;
                         }}
-                    @media screen and (max-width: 768px) {
+                    @media screen and (min-width: 300px) and (max-width: 768px) {
                         /* Adjust styles for smaller screens */
                     
                         /* Header styles */
@@ -287,7 +294,7 @@ a {
                             padding-top: 20px;
                             font-size: 20px;
                         }}
-                        @media screen and (max-width: 768px) {
+                        @media screen and (min-width: 300px) and (max-width: 768px) {
                             /* Adjust styles for smaller screens */
                         
                             /* Header styles */
@@ -295,7 +302,7 @@ a {
                                 padding-top: 20px;
                                 font-size: 20px;
                             }}  
-                            @media screen and (max-width: 768px) {
+                            @media screen and (min-width: 300px) and (max-width: 768px) {
                                 /* Adjust styles for smaller screens */
                             
                                 /* Header styles */
@@ -303,7 +310,7 @@ a {
                                     padding-top: 20px;
                                     font-size: 20px;
                                 }}
-                                @media screen and (max-width: 768px) {
+                                @media screen and (min-width: 300px) and (max-width: 768px) {
                                     /* Adjust styles for smaller screens */
                                 
                                     /* Header styles */
@@ -311,7 +318,7 @@ a {
                                         padding-top: 20px;
                                         font-size: 30px;
                                     }}
-                                @media screen and (max-width: 768px) {
+                                @media screen and (min-width: 300px) and (max-width: 768px) {
                                     /* Adjust styles for smaller screens */
                                 
                                     /* Header styles */
@@ -319,7 +326,7 @@ a {
                                         padding-top: 20px;
                                         font-size: 20px;
                                     }}
-                                    @media screen and (max-width: 768px) {
+                                    @media screen and (min-width: 300px) and (max-width: 768px) {
                                         /* Adjust styles for smaller screens */
                                     
                                         /* Header styles */
@@ -327,7 +334,7 @@ a {
                                             padding-top: 20px;
                                             font-size: 20px;
                                         }}
-                                    @media screen and (max-width: 768px) {
+                                    @media screen and (min-width: 300px) and (max-width: 768px) {
                                         /* Adjust styles for smaller screens */
                                     
                                         /* Header styles */
@@ -336,7 +343,7 @@ a {
                                             font-size: 20px;
                                             width: 100%;
                                         }}
-                                        @media screen and (max-width: 768px) {
+                                        @media screen and (min-width: 300px) and (max-width: 768px) {
                                             /* Adjust styles for smaller screens */
                                         
                                             /* Header styles */
@@ -344,7 +351,7 @@ a {
                                                 padding-top: 20px;
                                                 font-size: 20px;
                                             }}
-                                            @media screen and (max-width: 768px) {
+                                            @media screen and (min-width: 300px) and (max-width: 768px) {
                                                 /* Adjust styles for smaller screens */
                                             
                                                 /* Header styles */
@@ -352,7 +359,7 @@ a {
                                                     padding-top: 20px;
                                                     font-size: 20px;
                                                 }} 
-                                                @media screen and (max-width: 768px) {
+                                                @media screen and (min-width: 300px) and (max-width: 768px) {
                                                     .input-container {
                                                         padding-left: 20px;
                                                     
@@ -363,14 +370,14 @@ a {
                                                     }
                                                 
                                                     #bookNowForm button {
-                                                        flex: 1;
+                                                        flex: 1.5;
                                                         font-size: 0px;
                                                     }
                                                 
                                                     /* Add any other styles for smaller screens if needed */
                                                 }                                              
                                                 
-                                                        @media screen and (max-width: 768px) {
+                                                        @media screen and (min-width: 300px) and (max-width: 768px) {
                                                             /* Adjust styles for smaller screens */
                                                         
                                                             /* Header styles */
@@ -378,7 +385,7 @@ a {
                                                                 padding-top: 20px;
                                                                 font-size: 30px;
                                                             }} 
-                                                            @media screen and (max-width: 768px) {
+                                                            @media screen and (min-width: 300px) and (max-width: 768px) {
                                                                 /* Adjust styles for smaller screens */
                                                             
                                                                 /* Header styles */
@@ -386,7 +393,7 @@ a {
                                                                     padding-top: 20px;
                                                                     font-size: 30px;
                                                                 }}  
-                                                                @media screen and (max-width: 768px) {
+                                                                @media screen and (min-width: 300px) and (max-width: 768px) {
                                                                     /* Adjust styles for smaller screens */
                                                                 
                                                                     /* Header styles */
@@ -397,7 +404,7 @@ a {
                                                                         padding-bottom: 20px;
                                                                         border-bottom: none;
                                                                     }}    
-                                                @media only screen and (max-width: 768px) {
+                                                @media only screen and (min-width: 300px) and (max-width: 768px) {
                                                     .tabs {
                                                         display: none;
                                                         flex-direction: column;
@@ -434,11 +441,23 @@ a {
                                                         display: block;
                                                         position: absolute;
                                                         top: 20px;
-                                                        right: 20px;
+                                                        right: 50px;
                                                         font-size: 40px;
                                                         color: white;
                                                         cursor: pointer;
                                                     }}
+                                                    @media screen and (min-width: 300px) and (max-width: 768px) {
+                                                        .lets-get-started h1 {
+                                                            font-size: 20px;
+                                                            
+                                                        }} 
+                                                        @media screen and (min-width: 300px) and (max-width: 768px) {
+                                                            .lets-get-started {
+                                                            
+                                                                margin-left: 20px;
+                                                                margin-top: 0%;
+                                                            }}   
+
 /* Add this style for the input container */
 .input-container {
     display: flex;
