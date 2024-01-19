@@ -1,0 +1,104 @@
+/*Get it started page*/
+body {
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Use the full height of the viewport */
+    margin: 0; /* Remove default body margin */
+    background-image: url('form.jpeg');
+    background-size: cover;
+}
+.header {
+    background-color: black;
+    /*background-image: url('wolf.jpg');*/
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* z-index: 2; Ensure the header stays above other elements */
+}
+
+.tabs {
+
+    border-bottom: 5px solid #3498db;
+    display: flex;
+    justify-content: left;
+    padding-left: 20px;
+    
+}
+
+.tab {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.tab:hover {
+    background-color: none; /* Darken the background on hover if desired */
+}
+
+.dynamic-form {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.dynamic-form input {
+    margin-bottom: 10px;
+}
+.dev-form {
+    font-size: 40px;
+    text-decoration:none;
+    display: flex;
+    background-color: rgb(2, 2, 67);
+    color: white;
+    justify-content: center;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+.qa-service-form {
+    font-size: 40px;
+    text-decoration:none;
+    display: flex;
+    background-color: rgb(2, 2, 67);
+    color: white;
+    justify-content: center;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+
+.development-section-three h1 {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 0;
+    color: white;
+}
+
+.dev-form:hover {
+    background-color: darkblue; /* Darken the background on hover if desired */
+}
+
+.started-container {
+    box-sizing: border-box;
+    max-width: 1000px; /* Set a maximum width for better readability */
+    width: 100%; /* Take up the full width of the container */
+    border: 2px solid #3498db; /* Add a border around the form */
+    padding: 20px; /* Add some padding inside the form */
+    margin-left: 800px;
+}
+
+.qa-service-form:hover {
+    background-color: darkblue; /* Darken the background on hover if desired */
+}
