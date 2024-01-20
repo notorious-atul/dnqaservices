@@ -60,7 +60,7 @@ body {
     font-size: 40px;
     text-decoration:none;
     display: flex;
-    background-color: rgb(2, 2, 67);
+    background-color: none;
     color: white;
     justify-content: center;
     width: 70%;
@@ -72,7 +72,7 @@ body {
     font-size: 40px;
     text-decoration:none;
     display: flex;
-    background-color: rgb(2, 2, 67);
+    background-color: none;
     color: white;
     justify-content: center;
     width: 70%;
@@ -89,7 +89,7 @@ body {
 }
 
 .dev-form:hover {
-    background-color: darkblue; /* Darken the background on hover if desired */
+    background-color: blue; /* Darken the background on hover if desired */
 }
 
 .started-container {
@@ -102,13 +102,12 @@ body {
 }
 
 .qa-service-form:hover {
-    background-color: darkblue; /* Darken the background on hover if desired */
+    background-color: blue; /* Darken the background on hover if desired */
 }
-
-@media only screen and (max-width: 768px) and (min-width: 300px) {
+/*@media only screen and (max-width: 768px) and (min-width: 300px) {
     .started-container {
         font-size: 18px;
-        margin: 2%; /* Adjust margin to center the form horizontally */
+        margin: 2%;
         
     }
 
@@ -116,39 +115,38 @@ body {
     .qa-service-form,
     .dev-form {
         font-size: 25px;
-        margin-left: 0%; /* Adjust margin to center the elements horizontally */
+        margin-left: 0%;
         width: 100%;
     }
 }
 @media only screen and (max-width: 768px) and (min-width: 300px) {
     .qa-service-form,
     .dev-form {
-        background-color: blue;
+        background-color: lightblue;
         
     }}
 
 @media only screen and (max-width: 768px) and (min-width: 300px) {
     .header h1 {
         font-size: 25px;
-        margin: 2%; /* Adjust margin to center the form horizontally */
+        margin: 2%;
         
-    }}
+    }}*/
     @media only screen and (max-width: 425px) and (min-width: 300px) {
         .tabs a{
             font-size: 15px;
-            margin-left: 36%; /* Adjust margin to center the form horizontally */
+            margin-left: 36%;
             
         }}
         @media only screen and (max-width: 1080px) and (min-width:768px) {
             .tabs a{
                 font-size: 15px;
-                margin-left: 45%; /* Adjust margin to center the form horizontally */
-                
+                margin-left: 45%; 
             }}
             @media only screen and (max-width: 1080px) and (min-width: 768px) {
                 .started-container {
                     font-size: 18px;
-                    margin:0%; /* Adjust margin to center the form horizontally */
+                    margin:0%; 
                     padding-top: 20%;
                     border: none;
                 }
@@ -156,7 +154,38 @@ body {
                 .qa-service-form,
                 .dev-form {
                     font-size: 25px;
-                    margin-left: 0%; /* Adjust margin to center the elements horizontally */
+                    margin-left: 0%; 
                     width: 100%;
+         
+                }
+                .qa-service-form,
+                .dev-form{
+                    background-color: blue;
+                    
+                }
+            }
+            @media only screen and (max-width: 740px) and (min-width: 360px) {
+                .started-container {
+                    font-size: 18px;
+                    margin:0%; 
+                    padding-top: 20%;
+                    border: none;
+                }
+                .development-section-three h1,
+                .qa-service-form,
+                .dev-form {
+                    font-size: 25px;
+                    margin-left: 0%; 
+                    width: 100%;
+        
+                }
+                .qa-service-form,
+                .dev-form {
+                    background-color: blue;
+                }
+                .qa-service-form:hover,
+                .dev-form:hover{
+                    background-color: none;
+                    
                 }
             }
