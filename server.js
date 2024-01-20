@@ -11,7 +11,7 @@ app.use(express.static(__dirname));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Serve HTML form
+// Serve HTML fom
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
