@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Form</title>
+    <link rel="stylesheet" href="dev_modal.css">
+</head>
+<body>
+    <div class="header">
+        <h1>D&QA Services</h1>
+    <div class="tabs" id="tabs">
+        <a href="started.html" class="tab" id="tab">Back to options</a>
+    </div>
+    </div>
+    <div class="form-container">
+        <form id ="devmain" action="" method="post">
+            <h2>Choose the services</h2>
+            <label>
+                <input type="checkbox" name="option1"> SAAS <h3>Software as a Service (SaaS) is a cloud computing service model where software 
+                    applications are provided over the internet on a subscription basis.</h3>
+            </label>
+            <label>
+                <input type="checkbox" name="option2"> Blog Making <h3>Our blog-making service crafts engaging and customized websites tailored 
+                    to your brand, providing a seamless platform for sharing content and connecting with your audience.</h3>
+            </label>
+            <label>
+                <input type="checkbox" name="option3"> Hosting services <h3>Our hosting service ensures reliable and secure web hosting, offering high-performance servers 
+                    and scalable solutions to keep your website or application accessible and responsive 24/7.</h3>
+            </label>
+            <label>
+                <input type="checkbox" name="option4"> DB Management <h3>Our database management service optimizes the performance, security, and 
+                    scalability of your data infrastructure, ensuring seamless access, efficient organization, and robust protection of your valuable 
+                    information assets.</h3>
+            </label>
+            <label>
+                <input type="checkbox" name="option4"> Server Management <h3>Our server management service delivers seamless performance, security, 
+                    and scalability, ensuring the optimal functioning of your server infrastructure for uninterrupted business operations.</h3>
+            </label>
+            <button type="submit" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+    <script>
+        function submitForm() {
+            // You can perform client-side validation here if needed
+
+            // Submit the form using JavaScript
+            document.getElementById('devmain').submit();
+        }
+    </script>
+</body>
+</html>

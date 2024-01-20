@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Form</title>
+    <link rel="stylesheet" href="qa_modal.css">
+</head>
+<body>
+    <div class="header">
+        <h1>D&QA Services</h1>
+    <div class="tabs" id="tabs">
+        <a href="started.html" class="tab" id="tab">Back to options</a>
+    </div>
+    </div>
+    <div class="form-container">
+        <form id ="submitmain" action="/submit-form" method="post">
+            <h2>Choose the services</h2>
+            <label>
+                <input type="checkbox" name="option1" value="Manual_Testing"> Manual Testing <h3>Our manual testing service meticulously examines software functionality,
+                     ensuring thorough quality assurance and identifying potential issues through hands-on, detailed testing processes..</h3>
+            </label>
+            <label>
+                <input type="checkbox" name="option2" value = "Automation_testing"> Automation Testing <h3>Our automation testing service streamlines the software testing process,
+                     utilizing advanced tools and scripts to enhance efficiency, increase test coverage, and expedite the delivery of high-quality applications.</h3>
+            </label>
+            <label>
+                <input type="checkbox" name="option3" value = "Performance_testing"> Performance Testing <h3>Our performance testing service assesses system responsiveness and scalability under 
+                    various conditions, ensuring your software performs optimally and meets user expectations even during peak loads.</h3>
+            </label>
+            <label>
+                <input type="checkbox" name="option4" value="API_testing"> API Testing <h3>Our API testing service rigorously validates the functionality, reliability, and security of 
+                    your APIs, ensuring seamless communication and optimal performance across different software components.</h3>
+            </label>
+            <label>
+                <input type="checkbox" name="option4" value="Security_testing"> Security Testing <h3>Our security testing service safeguards your digital assets by identifying and addressing 
+                    vulnerabilities, ensuring robust protection against potential threats and unauthorized access to your applications and systems.</h3>
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('submitmain').addEventListener('submit', function (event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+            const form = document.getElementById('submitmain');
+            const selectedCheckboxes = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
+            const formData = new FormData(form);
+
+             // Convert FormData to plain JavaScript object
+        const formDataObject = {};
+        formData.forEach((value, key) => {
+            formDataObject[key] = value;
+        });
+
+        formDataObject.services = selectedCheckboxes;
+    
+               // Send form data to the server using fetcih
+        fetch('/submit-form', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formDataObject),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            // You can perform additional actions on success if needed
+            window.location.href = '/thanks_template.html';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // Handle the error appropriately
+        });
+    });
+    </script>
+</body>
+</html>

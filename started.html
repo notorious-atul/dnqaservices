@@ -20,56 +20,14 @@
     <div class="development-section-three" id="Development">
         <h1>Choose Your Service</h1>
         <!-- Trigger for the development form -->
-        <a href="#" class="dev-form" onclick="showForm('development-form')">Development</a>
-
-        <!-- Development form container--> 
-        <div class="dynamic-form" id="development-form">
-            <h4>Development Request Form</h4>
-            <!-- <form id="devForm">
-                <label for="devName">Your Name:</label>
-                <input type="text" id="devName" name="devName" required>
-
-                <label for="devEmail">Your Email:</label>
-                <input type="email" id="devEmail" name="devEmail" required>
-
-                <button type="button" onclick="submitForm('devForm')">Submit</button>
-            </form>-->
-        </div>
-    </div>
+        <a href="development_modal.html" class="dev-form">Development</a>
 
     <div class="qaservices" id="QAServices">
         <!-- Trigger for the QA services form -->
-        <a href="#" class="qa-service-form" onclick="showForm('qa-form')">Quality Assurance</a>
-
-        <!-- QA services form container -->
-        <div class="dynamic-form" id="qa-form">
-            <h4>QA Services Request Form</h4>
-           <!--  <form id="qaForm">
-                <label for="qaName">Your Name:</label>
-                <input type="text" id="qaName" name="qaName" required>
-
-                <label for="qaEmail">Your Email:</label>
-                <input type="email" id="qaEmail" name="qaEmail" required>
-
-                <button type="button" onclick="submitForm('qaForm')">Submit</button>
-            </form>-->
+        <a href="quality_modal.html" class="qa-service-form">Quality Assurance</a>
         </div>
     </div>
 </div>
 
-    <script>
-        // Function to show/hide the form
-        function showForm(formId) {
-            var form = document.getElementById(formId);
-            form.style.display = (form.style.display === 'none' || form.style.display === '') ? 'block' : 'none';
-        }
-
-        // Function to simulate form submission
-        function submitForm(formId) {
-            var formData = new FormData(document.getElementById(formId));
-            // You can handle form submission logic here, e.g., send data to the server
-            console.log('Form submitted with data:', formData);
-        }
-    </script>
 </body>
 </html>
