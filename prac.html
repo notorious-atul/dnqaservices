@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typewriter Effect</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #typewriter {
+            font-size: 2em;
+            border-right: 2px solid #333;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="typewriter"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var text = "business";
+            var speed = 150; // Adjust the speed (milliseconds) between letters
+
+            function typeWriter() {
+                if (index < text.length) {
+                    document.getElementById("typewriter").innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            var index = 0;
+            typeWriter();
+        });
+    </script>
+</body>
+</html>
