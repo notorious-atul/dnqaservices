@@ -7,7 +7,7 @@ body {
     background-color: black;
 }
 
-.lets-get-started {
+/*.lets-get-started {
 
     font-size: 50px;
     padding-top:20px;
@@ -20,7 +20,7 @@ body {
     margin-top: 100px;
     margin-left: 70%;
     padding: 0;
-    background-color: rgb(154, 223, 64);
+    background-color: rgb(238, 245, 230);
     border-radius: 20px;
     transition: transform 0.1s ease-in-out;
 }
@@ -33,21 +33,29 @@ body {
 
 .lets-get-started a:hover {
     color: blue;
-}
+}*/
 
 a {
     text-decoration: none;
 }
 
 .main-heading {
-    box-sizing: border-box;
+    /*box-sizing: border-box;
     width: 100%;
     height: 55px;
     top: 0;
     left: 0;
-    background-color: rgb(94, 10, 94); 
+    background-color: rgb(237, 229, 237); 
+    position: fixed;
+    z-index: 1;*/
+    display: flex;
+    width: 100vw;
+    height: 5vh;
+    background-color: violet;
     position: fixed;
     z-index: 1;
+    top: 0;
+    flex-direction: column;
 }
 
 .header {
@@ -57,7 +65,7 @@ a {
     width: 15%;
     height: 35px;
     top: 15px;
-    left: 0;
+    left: 80px;
     box-sizing: border-box;
     text-align: left;
     transition: transform 0.1s ease-in-out;
@@ -65,7 +73,7 @@ a {
 }
 .header h1{
     /*background-image: url('wolf.jpg');*/
-    color: white;
+    color: rgb(18, 1, 1);
     font-size: 25px;
     padding: 1px;
     margin: 1px;
@@ -100,7 +108,7 @@ a {
 .tab {
     padding: 5px 5px;
     background-color: transparent;
-    color: white;
+    color: rgb(11, 1, 1);
     cursor: pointer;
 }
 
@@ -110,61 +118,36 @@ a {
 
 /* ... Existing styles ... */
 
-.about-section {
-    position: relative;
-    width: 828px;
-    height: 600px;
-    margin-left: 10%;
-    margin-top: 40px;
-    transition: transform 0.3s ease-in-out;
-    box-sizing: border-box;
-    background-color: rgb(15, 15, 229);
-    border-radius: 20px;
-}
-
-/* Content inside the container */
-.about-section h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 60px;
-    margin-top:20px;
-    color:rgb(29, 11, 33);
-    padding: 20px;
-}
-
-.about-section p {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    background-color: transparent;
-    font-size: 40px;
-    padding: 20px;
-    color: white;
-}
-
-/* Hover effect to enlarge the container */
-.about-section:hover {
-    transform: scale(1.1);
-}
-
 .services-section h2 {
-    font-size: 100px;
+    font-size: 4vw;
+    width: 70vw;
     color: purple;
-    border-bottom:5px solid green ;
+    border-bottom:5px solid green;
+    background-color: blue;
+    margin-left: 2%;
+    
+}
+
+.services-section p {
+    font-size: 3vw;
+    color: white;
+    margin-left: 2%;
+    width: 72vw;
+    background-color: blue;
 }
 
 #typewriter {
-    font-size: 120px;
+    font-size: 9vw;
     white-space: nowrap;
     overflow: hidden;
+    background-color: transparent;
 
 }
 
 /* ... Existing styles ... */
 
 .services-section {
-    background-color: transparent;
+    /*background-color: transparent;
     color: white;
     font-size: 40px;
     padding: 20px;
@@ -172,30 +155,208 @@ a {
     margin-left: 8%;
     box-sizing: border-box;
     position: relative;
-    width: 80%;
+    width: 80%;*/
+    display: flex;
+    width: 80vw;
+    height: 90vh;
+    background-color: blueviolet;
+    flex-direction: column;
+    margin-top: 70px;
+    position: relative;
+    margin-left: 10%;
+    margin-bottom: 0;
 
 }
 
-.services-section h3 {
+.services-grid:hover {
+    transform: scale(1.1);
+}
+
+.services-section-two {
+
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    width: 80vw;
+    height: 100vh;
+    margin-left: 10%;
+}
+
+.services-grids {
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5%;
+    color: black;
+    background-color: transparent;
+    grid-template-rows: 180px 200px 200px;
+    width: 70vw;
+    height: 80vh;
+    margin-left: 5%;
+
+} 
+.services-grid {
+
+    border: 1px solid red;
+    font-size: 2vw;
+    background-color: white;
+    text-align: center;
+    padding-top: 20%;
+    transition: transform 0.1s ease-in-out;
+}
+
+
+@media all and (max-width:876px) {
+
+    .services-grids {
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px 90px 90px 90px 90px 90px 90px 90px;
+        gap: 1%;
+        width: 90%;
+        
+    }
+    .services-grid{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .services-section-two {
+        
+        height: 110vh;
+        width: 80vw;
+    }
+
+    .services-section {
+        height: 80vh;
+    }
+
+    .services-section h2 {
+        font-size: 6vw;
+
+    }
+
+    .services-section p {
+        font-size: 35px ;
+
+    }
+
+    .main-heading {
+        height: 7vh;
+    }
+}
+
+@media all and (max-width:1489px) {
+
+
+    .services-section {
+        height: 80vh;
+    }
+
+    .services-section h2 {
+        font-size: 6vw;
+
+    }
+
+    .services-section p {
+        font-size: 35px ;
+
+    }
+
+    .main-heading {
+        height: 7vh;
+    }
+}
+
+
+@media all and (max-width:430px) {
+
+
+    .services-section-two {
+        
+        height: 95vh;
+        width: 80vw;
+    }
+
+    .services-section {
+        height: 80vh;
+    }
+
+    .services-section h2 {
+        font-size: 10vw;
+
+    }
+
+    .services-section p {
+        font-size: 6vw ;
+        line-height: 3vh;
+
+    }
+
+    .main-heading {
+        height: 7vh;
+    }
+
+    .motivational-section {
+        min-height: 130vh;
+    }
+    
+
+    .motivational-section p {
+        line-height: 30px;
+        min-height: 65vh;
+    }
+    .motivational-section h3 {
+        line-height: 60px;
+        flex-direction: column;
+    }
+}
+
+.services-section-two h3 {
     color: purple;
+    font-size: 8vw;
+    text-align: center;
+    margin-top: 0;
+    background-color: hotpink;
+    
    
 }
 
 .motivational-section {
+    display: flex;
+    width: 78vw;
+    height: 95vh;
     background-color: pink;
     color: black;
-    font-size: 40px;
-    padding: 20px;
-    margin-top: 10px;
+    margin-left: 10%;
+    flex-direction: column;
+    position: relative;
+    padding: 1%;
+    
+
 }
 
 .motivational-section h3 {
     color: black;
+    display: flex;
+    font-size: 60px;
+    align-items: center;
+    width: 78vw;
+    height:35vh;
+    background-color: blue;
+    margin-bottom: 0;
+    margin-top: 0;
+    
 }   
 
 .motivational-section p {
+    display: flex;
     color: black;
-    background-color: transparent;
+    font-size: 40px;
+    width: 78vw;
+    height: 48vh;
+    background-color: red;
+    margin-top: 5%;
+    position: relative;
 }
 
 .development-section {
@@ -364,464 +525,50 @@ a {
     display: none;
 }
 
-/* ... Existing styles ... */
-@media screen and (max-width: 375px) {
-    /* Adjust styles for smaller screens */
 
-    /* Header styles */
-    .header {
+  @media all and (max-width: 1450px) {
+     .tabs {display: none;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
-    }}
-    @media screen and (min-width: 300px) and (max-width: 768px) {
-        /* Adjust styles for smaller screens */
-    
-        /* Header styles */
-        .header h1 {
-            margin-right: 20%;
-        }}
-    
-    @media screen and (min-width: 300px) and (max-width: 768px) {
-        /* Adjust styles for smaller screens */
-    
-        /* Header styles */
-        .footer-section {
-            padding-top: 10px;
-            font-size:10px;
-            width: 100%;
-        }}
-    @media screen and (min-width: 300px) and (max-width: 768px) {
-        /* Adjust styles for smaller screens */
-    
-        /* Header styles */
-        .about-section h2 {
-            padding-top: 60px;
-            font-size: 30px;
-        }}
-        @media screen and (min-width: 300px) and (max-width: 768px) {
-            /* Adjust styles for smaller screens */
-        
-            /* Header styles */
-            .services-section{
-                padding-top: 20px;
-                font-size: 20px;
-            }}
-            @media screen and (min-width: 300px) and (max-width: 768px) {
-                /* Adjust styles for smaller screens */
-            
-                /* Header styles */
-                .contact-info {
-                    padding-top: 20px;
-                    font-size: 20px;
-                }}
-                @media screen and (min-width: 300px) and (max-width: 768px) {
-                    /* Adjust styles for smaller screens */
-                
-                    /* Header styles */
-                    .contact-section h3 {
-                        padding-top: 20px;
-                        font-size: 30px;
-                    }}
-                    @media screen and (min-width: 300px) and (max-width: 768px) {
-                        /* Adjust styles for smaller screens */
-                    
-                        /* Header styles */
-                        .contact-section {
-                            padding-top: 20px;
-                            font-size: 20px;
-                        }}
-                    @media screen and (min-width: 300px) and (max-width: 768px) {
-                        /* Adjust styles for smaller screens */
-                    
-                        /* Header styles */
-                        .sdet-services {
-                            padding-top: 20px;
-                            font-size: 20px;
-                        }}
-                        @media screen and (min-width: 300px) and (max-width: 768px) {
-                            /* Adjust styles for smaller screens */
-                        
-                            /* Header styles */
-                            .methodology {
-                                padding-top: 20px;
-                                font-size: 20px;
-                            }}  
-                            @media screen and (min-width: 300px) and (max-width: 768px) {
-                                /* Adjust styles for smaller screens */
-                            
-                                /* Header styles */
-                                .testing-type  {
-                                    padding-top: 20px;
-                                    font-size: 20px;
-                                }}
-                                @media screen and (min-width: 300px) and (max-width: 768px) {
-                                    /* Adjust styles for smaller screens */
-                                
-                                    /* Header styles */
-                                    .qaservices h4{
-                                        padding-top: 20px;
-                                        font-size: 30px;
-                                    }}
-                                @media screen and (min-width: 300px) and (max-width: 768px) {
-                                    /* Adjust styles for smaller screens */
-                                
-                                    /* Header styles */
-                                    .development-section  {
-                                        padding-top: 20px;
-                                        font-size: 20px;
-                                    }}
-                                    @media screen and (min-width: 300px) and (max-width: 768px) {
-                                        /* Adjust styles for smaller screens */
-                                    
-                                        /* Header styles */
-                                        .development-section-two  {
-                                            padding-top: 20px;
-                                            font-size: 20px;
-                                        }}
-                                    @media screen and (min-width: 300px) and (max-width: 768px) {
-                                        /* Adjust styles for smaller screens */
-                                    
-                                        /* Header styles */
-                                        .motivational-section  {
-                                            padding-top: 20px;
-                                            font-size: 20px;
-                                            width: 100%;
-                                        }}
-                                        @media screen and (min-width: 300px) and (max-width: 768px) {
-                                            /* Adjust styles for smaller screens */
-                                        
-                                            /* Header styles */
-                                            .services-section  {
-                                                padding-top: 20px;
-                                                font-size: 20px;
-                                            }}
-                                            @media screen and (min-width: 300px) and (max-width: 768px) {
-                                                /* Adjust styles for smaller screens */
-                                            
-                                                /* Header styles */
-                                                .about-section  {
-                                                    padding-top: 20px;
-                                                    font-size: 20px;
-                                                }} 
-                                                @media screen and (min-width: 300px) and (max-width: 768px) {
-                                                    .input-container {
-                                                        padding-left: 20px;
+        position: absolute;
+        top: 50px; /* Adjust according to your header height */
+        left: 0;
+        background-color: #333;
+        margin-top: 0;
+    }
+
+    .tabs.show {
+        display: flex;
+    }
+
+    .tab {
+        padding: 15px;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 0;
+        border-bottom: 1px solid #555;
+    }
+
+    .header {
+        position: fixed;
+
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 50px;
+        font-size: 50px;
+        color: white;
+        cursor: pointer;
+    }
+    }
                                                         
-                                                    
-                                                    }
-                                                
-                                                    #email {
-                                                        flex: 3;
-                                                    }
-                                                
-                                                    #bookNowForm button {
-                                                        flex: 2;
-                                                    }
-                                                
-                                                    /* Add any other styles for smaller screens if needed */
-                                                }                                              
-                                                
-                                                        @media screen and (min-width: 300px) and (max-width: 768px) {
-                                                            /* Adjust styles for smaller screens */
-                                                        
-                                                            /* Header styles */
-                                                            .development-section h3 {
-                                                                padding-top: 20px;
-                                                                
-                                                            }} 
-                                                            @media screen and (min-width: 300px) and (max-width: 768px) {
-                                                                /* Adjust styles for smaller screens */
-                                                            
-                                                                /* Header styles */
-                                                                .services-section h2  {
-                                                                    padding-top: 20px;
-                                                                    font-size: 30px;
-                                                                }}  
-                                                                @media screen and (min-width: 300px) and (max-width: 768px) {
-                                                                    /* Adjust styles for smaller screens */
-                                                                
-                                                                    /* Header styles */
-                                                                    .lastbutton {
-                                                                        padding-top: 20px;
-                                                                        font-size: 10px;
-                                                                        padding-left: 160px;
-                                                                        padding-bottom: 20px;
-                                                                        border-bottom: none;
-                                                                    }}    
-                                                @media only screen and (max-width: 1442px) {
-                                                    .tabs {
-                                                        display: none;
-                                                        flex-direction: column;
-                                                        align-items: center;
-                                                        width: 100%;
-                                                        position: absolute;
-                                                        top: 50px; /* Adjust according to your header height */
-                                                        left: 0;
-                                                        background-color: #333;
-                                                        margin-top: 0;
-                                                    }
-                                                
-                                                    .tabs.show {
-                                                        display: flex;
-                                                    }
-                                                
-                                                    .tab {
-                                                        padding: 15px;
-                                                        text-align: center;
-                                                        color: white;
-                                                        text-decoration: none;
-                                                        width: 100%;
-                                                        box-sizing: border-box;
-                                                        margin-top: 0;
-                                                        border-bottom: 1px solid #555;
-                                                    }
-                                                
-                                                    .header {
-                                                        position: fixed;
-                                            
-                                                    }
-                                                
-                                                    .menu-icon {
-                                                        display: block;
-                                                        position: absolute;
-                                                        top: 0;
-                                                        right: 50px;
-                                                        font-size: 50px;
-                                                        color: white;
-                                                        cursor: pointer;
-                                                    }}
-                                                    @media screen and (max-width: 1459px) {
-                                                        /* Adjust styles for smaller screens */
-                                                    
-                                                        /* Header styles */
-                                                        .lets-get-started {
-                                                            padding-top: 10px;
-                                                            width: 20%;
-                                                            margin-right: 20%
-                                                        }}
-                                                        @media screen and (max-width: 1442px) {
-                                                            .lets-get-started {
-                                                                padding-top: 10px;
-                                                                width: 50%;
-                                                                margin-left: 14%;
-                                                            }}
-                                                            @media screen and (max-width: 375px) {
-                                                                .lets-get-started {
-                                                                    margin-top: 80px;
-                                                                    width: 100%;
-                                                                    margin-left: 40px;
-                                                                }
-                                                                    .about-section{
-                                                                        width: 100%;
-                                                                        height: 1100px;
-                                                                        margin-left:40px;
-                                                                    }
-                                                                    .about-section h2{
-                                                                        padding-top: 5px;
-                                                                        font-size: 50px;
-                                                                    }
-                                                                    .main-heading {
-                                                                        width:100%;
-                                                                    }
-                                                                    .header h1 {
-                                                                        margin-left: 40px;
-                                                                    }
-                                                                    .services-section {
-                                                                        
-                                                                        margin-top: 10px;
-                                                                        margin-left: 40px;
-                                                                        width: 100%;
-
-                                                                    }
-                                                                    .services-section h2 {
-                                                                        
-                                                                        margin-left: 10px;
-                                                                        font-size: 60px;
-                                                                        
-
-                                                                    }
-                                                                    .services-section p {
-                                                                        font-size: 25px;
-
-                                                                    }
-                                                                    .services-section h3 , ul {
-                                                                        font-size:25px;
-
-                                                                    }
-
-                                                                    #typewriter {
-                                                                        font-size: 50px;
-                                                                    }
-                                                                    .development-section h3{
-                                                                        font-size: 50px;
-                                                                    }
-                                                                    .development-section {
-                                                                        margin-left: 10px;
-                                                                    }
-                                                                    .development-section-two{
-                                                                        height: 50%;
-                                                                        width: 100%;
-                                                                    }
-                                                                    .contact-section {
-                                                                        margin-left: 25px;
-                                                                        margin-top:0;
-                                                                        padding: 0;
-                                                                        width: 110%;
-                                                                    }
-                                                                    .motivational-section {
-                                                                        width: 80%;
-                                                                        margin-left: 40px;
-
-                                                                    }
-                                                                    .sdet-services , .sdet-services h4{
-                                                                        width: 100%;
-                                                                        margin-left:25px;
-
-                                                                    }
-                                                                    .methodology , .methodology h4{
-                                                                        width: 100%;
-                                                                        padding:20px;
-                                                                    }
-
-                                                                    .contact-info , .contact-info p {
-                                                                        padding: 20px;
-                                                                    }
-                                                                    .testing-type {
-                                                                        margin-left: 40px;
-                                                                        width: 100%;
-                                                                    }
-                                                                    .qaservices h4 , .qaservices {
-                                                                        font-size: 50px;
-                                                                        margin-left: 10px;
-                                                                        height: 120px;
-                                                                    }
-                                                                    .testing-type h4 {
-                                                                        width:100%;
-                                                                        height: 10%;
-                                                                        margin-left: 40px;
-
-                                                                    }
-                                                                    .form {
-                                                                        margin-left: 30px;
-                                                                        
-                                                        
-                                                                    }
-
-                                                                    
-                                                            }
-                                                            @media screen and (max-width: 430px) {
-                                                                .lets-get-started {
-                                                                    margin-top: 80px;
-                                                                    width: 100%;
-                                                                    margin-left: 40px;
-                                                                }
-                                                                    .about-section{
-                                                                        width: 100%;
-                                                                        height: 1100px;
-                                                                        margin-left:40px;
-                                                                    }
-                                                                    .about-section h2{
-                                                                        padding-top: 5px;
-                                                                        font-size: 50px;
-                                                                    }
-                                                                    .main-heading {
-                                                                        width:100%;
-                                                                    }
-                                                                    .header {
-                                                                        width: 100%;
-                                                                    }
-                                                                    .header h1 {
-                                                                        margin-left: 20px;
-                                                                
-                                                                    }
-                                                                    .services-section {
-                                                                        
-                                                                        margin-top: 10px;
-                                                                        margin-left: 40px;
-                                                                        width: 100%;
-
-                                                                    }
-                                                                    .services-section h2 {
-                                                                        
-                                                                        margin-left: 10px;
-                                                                        font-size: 60px;
-                                                                        
-
-                                                                    }
-                                                                    .services-section p {
-                                                                        font-size: 25px;
-
-                                                                    }
-                                                                    .services-section h3 , ul {
-                                                                        font-size:25px;
-
-                                                                    }
-
-                                                                    #typewriter {
-                                                                        font-size: 50px;
-                                                                    }
-                                                                    .development-section h3{
-                                                                        font-size: 50px;
-                                                                    }
-                                                                    .development-section {
-                                                                        margin-left: 10px;
-                                                                    }
-                                                                    .development-section-two{
-                                                                        height: 50%;
-                                                                        width: 100%;
-                                                                    }
-                                                                    .contact-section {
-                                                                        margin-left: 25px;
-                                                                        margin-top:0;
-                                                                        padding: 0;
-                                                                        width: 110%;
-                                                                    }
-                                                                    .motivational-section {
-                                                                        width: 80%;
-                                                                        margin-left: 40px;
-
-                                                                    }
-                                                                    .sdet-services {
-                                                                        width: 100%;
-                                                                        margin-left:25px;
-
-                                                                    }
-                                                                    .sdet-services h4{
-                                                                        width: 100%;
-                                                                        margin-left:0px;
-                                                                        font-size: 40px;
-                                                                    }
-
-                                                                    .methodology , .methodology h4{
-                                                                        width: 100%;
-                                                                        padding:20px;
-                                                                    }
-
-                                                                    .contact-info , .contact-info p {
-                                                                        padding: 20px;
-                                                                    }
-                                                                    .testing-type {
-                                                                        margin-left: 40px;
-                                                                        width: 100%;
-                                                                    }
-                                                                    .qaservices h4 , .qaservices {
-                                                                        font-size: 50px;
-                                                                        margin-left: 10px;
-                                                                        height: 120px;
-                                                                    }
-                                                                    .testing-type h4 {
-                                                                        width:100%;
-                                                                        height: 10%;
-                                                                        margin-left: 40px;
-
-                                                                    }
-                                                                    .form {
-                                                                        margin-left: 30px;
-                                                                        
-                                                        
-                                                                    }
-
-                                                                    
-                                                            }
 
 /* Add this style for the input container */
 .input-container {
