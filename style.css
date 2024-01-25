@@ -188,7 +188,7 @@ a {
     grid-template-columns: repeat(3,1fr);
     gap: 5%;
     color: black;
-    background-color: green;
+    background-color: transparent;
     grid-template-rows: 180px 200px 200px;
     width: 70vw;
     height: 80vh;
@@ -210,16 +210,18 @@ a {
     box-sizing: border-box;
     width: 70vw;
     height: 90vh;
-    background-color: blue;
+    background-color: transparent;
     margin-left: 14%;
 
 }
 
 .motivational-section h3 {
     font-size: 8vh;
+    color: purple;
 }
 .motivational-section p {
     font-size: 6vh;
+    color: white;
 }
 
 @media all and (max-width:876px) {
