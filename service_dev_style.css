@@ -1,0 +1,106 @@
+.development-section {
+    display: flex;
+    background-color: red;
+    color: violet;
+    width: 80vw;
+    height: 40vh;
+    margin-left: 10%;
+    position: relative;
+    
+    
+}
+.development-section h3 {
+    font-size: 10vh;
+    background-color: transparent;
+    padding: 20px;
+    margin-top: 0;
+}
+
+.development-section-two {
+    font-size: 40px;
+    background-color: rgb(84, 15, 84);
+    color: white;
+    margin-left: 10%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    width: 80%;
+    height: 1100px;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 50px;
+ 
+}
+
+.input-container {
+    display: flex;
+    gap: 0; /* Remove the gap between input and button */
+    justify-content: center;
+    margin-top: 55px;
+}
+
+/* Style for the email input */
+#email {
+    border-radius: 30px 0 0 30px; /* Rounded corners on the left */
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #ccc; /* Add a border for better visibility */
+    width: 20%; /* Adjust the width as needed */
+    height: 100px;
+    font-size: 30px;
+    max-width: none;
+    max-height: none;
+}
+
+/* Style for the Book Now button */
+#bookNowForm button {
+    border-radius: 0 30px 30px 0; /* Rounded corners on the right */
+    background-color: black; /* Set the background color to black */
+    color: white; /* Set text color to white */
+    padding: 10px; /* Adjust padding as needed */
+    cursor: pointer;
+    width: 20%;
+    font-size: 30px;
+}
+
+@media all and (max-width: 1450px) {
+    .tabs {display: none;
+       flex-direction: column;
+       align-items: center;
+       width: 100%;
+       position: absolute;
+       top: 50px; /* Adjust according to your header height */
+       left: 0;
+       background-color: #333;
+       margin-top: 0;
+   }
+
+   .tabs.show {
+       display: flex;
+   }
+
+   .tab {
+       padding: 15px;
+       text-align: center;
+       color: white;
+       text-decoration: none;
+       width: 100%;
+       box-sizing: border-box;
+       margin-top: 0;
+       border-bottom: 1px solid #555;
+   }
+
+   .header {
+       position: fixed;
+
+   }
+
+   .menu-icon {
+       display: block;
+       position: absolute;
+       top: 0;
+       right: 50px;
+       font-size: 50px;
+       color: white;
+       cursor: pointer;
+   }
+
+   }

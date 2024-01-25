@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>D&QA Services</title>
+</head>
+<body>
+    <div class="header">
+        <h1>D&QA Services</h1>
+    </div>
+    <div class="tabs">
+        <a href="development.html" class="tab">Development</a>
+        <a href="qaservices.html" class="tab">QA Services</a>
+        <a href="contactus.html" class="tab">Contact us</a>
+    </div>
+
+    <div class="qaservices" id="QAServices">
+        <h4>QA Services</h4>
+</div>
+
+<div class = "form" id="form">
+<form id="bookNowForm" action="/submit" method="post">
+        <div class="input-container">
+        <input placeholder="Enter Your Email" type="email" id="email" name="email" required autocomplete="off">
+        <button type="submit">Schedule a Demo</button>
+        </div>
+        </form>
+</div>
+    
+
+<div class="testing-type" id="testingtypes">
+    <h4>Why Qualty Assurance?</h4>
+    <ul>
+        <li>&#10003; Enhanced Product Quality</li>
+        <li>&#10003; Customer Satisfaction</li>
+        <li>&#10003; Cost Savings</li>
+        <li>&#10003; Risk Mitigation</li>
+        <li>&#10003; Brand Reputation</li>
+    </ul>
+   
+</div>
+
+<div class="methodology">
+    <h4>What do we provide?</h4>
+    <p>We follow an agile testing methodology, integrating testing processes seamlessly into the development lifecycle.
+        This ensures early detection of issues and allows for rapid and effective resolution.</p>
+        <ul>
+            <li>&#10003; Unparalleled Expertise</li>
+            <li>&#10003; Innovative Solutions</li>
+            <li>&#10003; Customer-Centric Approach</li>
+            <li>&#10003; Agile and Efficient Processes</li>
+            <li>&#10003; Customized Solutions</li>
+            <li>&#10003; Unrivaled Support and Service Quality</li>
+          </ul>
+          
+</div>
+
+<div class="sdet-services">
+    <h4>Automate your site for Testing!!!</h4>
+    <p>Empower your testing endeavors with our automation testing suite services, offering efficiency, 
+        accuracy, and rapid test execution to elevate the quality of your software while saving time and resources.</p>
+</div>
+
+
+<div class="contact-section" id="Contactus">
+    <h3>Contact Us</h3>
+    <p>For inquiries and support, feel free to reach out to us:</p>
+    <div class="contact-info">
+        <p>Email: <a href="mailto:atul4055@gmail.com">atul4055@gmail.com</a></p>
+        <p>office location: to be implemented</p>
+    </div>
+</div>
+<footer class="footer-section">
+    <p>&copy; 2024 D&QA Services. All rights reserved.</p>
+    <!--<img src="path/to/your/logo.png" alt="Company Logo">-->
+</footer>
+<script>
+
+function submitForm() {
+    // You can perform client-side validation here if needed
+
+    // Submit the form using JavaScript
+    document.getElementById('bookNowForm').submit();
+}
+
+document.getElementById('menu-icon').addEventListener('click', function () {
+    var tabs = document.getElementById('tabs');
+    tabs.classList.toggle('show');
+});
+
+// Smooth scroll behavior for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+        var tabs = document.getElementById('tabs');
+        tabs.classList.remove('show');
+        });
+    
+    })
+</script>
+
+</body>
+</html>

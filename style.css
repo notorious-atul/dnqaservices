@@ -123,7 +123,7 @@ a {
     width: 70vw;
     color: purple;
     border-bottom:5px solid green;
-    background-color: blue;
+    background-color: transparent;
     margin-left: 2%;
     
 }
@@ -133,7 +133,7 @@ a {
     color: white;
     margin-left: 2%;
     width: 72vw;
-    background-color: blue;
+    background-color: transparent;
 }
 
 #typewriter {
@@ -159,7 +159,7 @@ a {
     display: flex;
     width: 80vw;
     height: 90vh;
-    background-color: blueviolet;
+    background-color: transparent;
     flex-direction: column;
     margin-top: 70px;
     position: relative;
@@ -176,7 +176,7 @@ a {
 
     display: flex;
     flex-direction: column;
-    background-color: green;
+    background-color: transparent;
     width: 80vw;
     height: 100vh;
     margin-left: 10%;
@@ -188,7 +188,7 @@ a {
     grid-template-columns: repeat(3,1fr);
     gap: 5%;
     color: black;
-    background-color: transparent;
+    background-color: green;
     grid-template-rows: 180px 200px 200px;
     width: 70vw;
     height: 80vh;
@@ -203,8 +203,24 @@ a {
     text-align: center;
     padding-top: 20%;
     transition: transform 0.1s ease-in-out;
+
+} 
+
+.motivational-section {
+    box-sizing: border-box;
+    width: 70vw;
+    height: 90vh;
+    background-color: blue;
+    margin-left: 14%;
+
 }
 
+.motivational-section h3 {
+    font-size: 8vh;
+}
+.motivational-section p {
+    font-size: 6vh;
+}
 
 @media all and (max-width:876px) {
 
@@ -243,6 +259,7 @@ a {
     .main-heading {
         height: 7vh;
     }
+
 }
 
 @media all and (max-width:1489px) {
@@ -265,6 +282,7 @@ a {
     .main-heading {
         height: 7vh;
     }
+
 }
 
 
@@ -296,18 +314,11 @@ a {
         height: 7vh;
     }
 
-    .motivational-section {
-        min-height: 130vh;
-    }
-    
-
-    .motivational-section p {
-        line-height: 30px;
-        min-height: 65vh;
-    }
     .motivational-section h3 {
-        line-height: 60px;
-        flex-direction: column;
+        font-size: 4vh;
+    }
+    .motivational-section p {
+        font-size: 3vh;
     }
 }
 
@@ -316,162 +327,16 @@ a {
     font-size: 8vw;
     text-align: center;
     margin-top: 0;
-    background-color: hotpink;
+    background-color: transparent;
     
-   
-}
-
-.motivational-section {
-    display: flex;
-    width: 78vw;
-    height: 95vh;
-    background-color: pink;
-    color: black;
-    margin-left: 10%;
-    flex-direction: column;
-    position: relative;
-    padding: 1%;
-    
-
-}
-
-.motivational-section h3 {
-    color: black;
-    display: flex;
-    font-size: 60px;
-    align-items: center;
-    width: 78vw;
-    height:35vh;
-    background-color: blue;
-    margin-bottom: 0;
-    margin-top: 0;
-    
-}   
-
-.motivational-section p {
-    display: flex;
-    color: black;
-    font-size: 40px;
-    width: 78vw;
-    height: 48vh;
-    background-color: red;
-    margin-top: 5%;
-    position: relative;
-}
-
-.development-section {
-    background-color: transparent;
-    color: violet;
-    box-sizing: border-box;
-    width: 70%;
-    height: 200px;
-    margin-left: 20%;
-    position: relative;
-    text-align: left;
-    padding: 0;
-    top:0;
-}
-.development-section h3 {
-    font-size: 100px;
-    background-color: transparent;
-    padding: 50px;
-}
-
-.development-section-two {
-    font-size: 40px;
-    background-color: rgb(84, 15, 84);
-    color: white;
-    margin-left: 10%;
-    margin-right: 10px;
-    box-sizing: border-box;
-    width: 80%;
-    height: 1100px;
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 50px;
- 
-}
-
-.testing-type {
-    background-color: rgb(84, 15, 84);
-    color: white;
-    margin-left: 10%;
-    margin-right: 10px;
-    box-sizing: border-box;
-    width: 40%;
-    height: 500px;
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 50px;
-    font-size: 40px;
-}
-
-.testing-type h4{
-    text-align: left;
-}
-/*removing bullet points before ticks.*/
-.testing-type ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        
-      }
-
-.qaservices {
-    background-color: transparent;
-    color: violet;
-    box-sizing: border-box;
-    width: 70%;
-    height: 200px;
-    margin-left: 30%;
-    position: relative;
-    text-align: left;
-    padding: 0;
-    top:0;
-}
-
-.qaservices h4 {
-    font-size: 100px;
-    background-color: transparent;
-    padding: 50px;
-}
-
-.methodology{
-    background-color: rgb(46, 152, 104);
-    color: black;
-    font-size: 40px;
-    margin-left: 7%;
-    margin-right: 7%;
-    border-radius: 20px;
-    padding: 70px;
-    margin-top: 10px;
-}
-
-.methodology h4{
-    font-size: 50px;
-    margin-left: 0;
-    
-}
-
-.methodology ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-.sdet-services {
-    background-color: transparent;
-    color: rgb(225, 219, 226);
-    font-size: 40px;
-    padding: 20px;
-    margin-top: 10px; 
-}
+}  
 
 .footer-section {
     background-color: black;
     color: white;
     padding: 20px;
     text-align: center;
+    position: relative;
 }
 
 .footer-section p {
@@ -481,44 +346,6 @@ a {
 .footer-section img {
     max-width: 100px; /* Adjust the maximum width of your logo as needed */
     margin-top: 10px; /* Add margin above the logo */
-}
-
-.contact-section {
-    background-color: white;
-    color: black;
-    font-size: 40px;
-    margin-left: 180px;
-    box-sizing: border-box;
-    width: 80%;
-    height: 600px;
-    margin-top: 0;
-    border-radius: 20px;
-    
-}
-
-.contact-section h3 {
-    color: black;
-    margin-bottom: 15px;
-    font-size: 100px;
-    margin-top: 10px;
-    border-bottom: 5px solid blueviolet;
-    background-color: rgb(14, 104, 240);
-    border-radius: 20px;
-   
-}
-
-.contact-info {
-    margin-top: 10px;
-}
-
-
-.lastbutton {
-    padding-top: 10px;
-    font-size: 40px;
-    padding-left: 40%;
-    padding-bottom: 0;
-    border-radius: 20px;
-    border-bottom: 5px solid rgb(218, 189, 144);
 }
 
 .menu-icon {
@@ -567,6 +394,7 @@ a {
         color: white;
         cursor: pointer;
     }
+
     }
                                                         
 

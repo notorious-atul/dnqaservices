@@ -1,0 +1,174 @@
+.testing-type {
+    background-color: rgb(84, 15, 84);
+    color: white;
+    margin-left: 10%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    width: 40%;
+    height: 500px;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.testing-type h4{
+    text-align: left;
+}
+/*removing bullet points before ticks.*/
+.testing-type ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+      }
+
+.qaservices {
+    background-color: transparent;
+    color: violet;
+    box-sizing: border-box;
+    width: 70%;
+    height: 200px;
+    margin-left: 30%;
+    position: relative;
+    text-align: left;
+    padding: 0;
+    top:0;
+}
+
+.qaservices h4 {
+    font-size: 100px;
+    background-color: transparent;
+    padding: 50px;
+}
+
+.methodology{
+    background-color: rgb(46, 152, 104);
+    color: black;
+    font-size: 40px;
+    margin-left: 7%;
+    margin-right: 7%;
+    border-radius: 20px;
+    padding: 70px;
+    margin-top: 10px;
+}
+
+.methodology h4{
+    font-size: 50px;
+    margin-left: 0;
+    
+}
+
+.methodology ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+.sdet-services {
+    background-color: transparent;
+    color: rgb(225, 219, 226);
+    font-size: 40px;
+    padding: 20px;
+    margin-top: 10px; 
+}
+
+.input-container {
+    display: flex;
+    gap: 0; /* Remove the gap between input and button */
+    justify-content: center;
+    margin-top: 55px;
+}
+
+/* Style for the email input */
+#email {
+    border-radius: 30px 0 0 30px; /* Rounded corners on the left */
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #ccc; /* Add a border for better visibility */
+    width: 20%; /* Adjust the width as needed */
+    height: 100px;
+    font-size: 30px;
+    max-width: none;
+    max-height: none;
+}
+
+/* Style for the Book Now button */
+#bookNowForm button {
+    border-radius: 0 30px 30px 0; /* Rounded corners on the right */
+    background-color: black; /* Set the background color to black */
+    color: white; /* Set text color to white */
+    padding: 10px; /* Adjust padding as needed */
+    cursor: pointer;
+    width: 20%;
+    font-size: 30px;
+}
+
+@media all and (max-width: 1450px) {
+    .tabs {display: none;
+       flex-direction: column;
+       align-items: center;
+       width: 100%;
+       position: absolute;
+       top: 50px; /* Adjust according to your header height */
+       left: 0;
+       background-color: #333;
+       margin-top: 0;
+   }
+
+   .tabs.show {
+       display: flex;
+   }
+
+   .tab {
+       padding: 15px;
+       text-align: center;
+       color: white;
+       text-decoration: none;
+       width: 100%;
+       box-sizing: border-box;
+       margin-top: 0;
+       border-bottom: 1px solid #555;
+   }
+
+   .header {
+       position: fixed;
+
+   }
+
+   .menu-icon {
+       display: block;
+       position: absolute;
+       top: 0;
+       right: 50px;
+       font-size: 50px;
+       color: white;
+       cursor: pointer;
+   }
+
+   }.contact-section {
+    background-color: white;
+    color: black;
+    font-size: 40px;
+    margin-left: 180px;
+    box-sizing: border-box;
+    width: 80%;
+    height: 600px;
+    margin-top: 0;
+    border-radius: 20px;
+    
+}
+
+.contact-section h3 {
+    color: black;
+    margin-bottom: 15px;
+    font-size: 100px;
+    margin-top: 10px;
+    border-bottom: 5px solid blueviolet;
+    background-color: rgb(14, 104, 240);
+    border-radius: 20px;
+   
+}
+
+.contact-info {
+    margin-top: 10px;
+}
