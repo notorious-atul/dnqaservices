@@ -262,6 +262,46 @@ a {
 
 }
 
+@media all and (max-width: 1313px) {
+
+    .motivational-section h3 {
+        font-size: 6vh;
+    }
+    .motivational-section p {
+        font-size: 5vh;
+    }
+    
+}
+@media all and (max-width: 958px) {
+
+    .motivational-section h3 {
+        font-size: 5vh;
+    }
+    .motivational-section p {
+        font-size: 4vh;
+    }
+    
+}
+
+@media all and (max-height: 800px) {
+
+   .motivational-section {
+    margin-top: 60%;
+   }
+   .main-heading {
+    min-height: 8vh;
+} 
+}
+
+@media all and (max-height: 900px) {
+
+    .services-section-two {
+         margin-top: 25%;
+
+    } 
+
+ }
+
 @media all and (max-width:1489px) {
 
 
