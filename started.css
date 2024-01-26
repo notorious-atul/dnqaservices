@@ -25,7 +25,6 @@ body {
 
 .tabs {
 
-    border-top: 5px solid #3498db;
     display: flex;
     justify-content: left;
     padding-left: 20px;
@@ -34,16 +33,19 @@ body {
 
 .tab {
     background-color: none;
-    color: white;
+    color: purple;
     cursor: pointer;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
     margin-top: 5px;
+    border: 2px solid white;
+    border-radius: 7px;
+    padding: 2px;
     
 }
 
 .tab:hover {
-    background-color: none; /* Darken the background on hover if desired */
+    background-color: white; /* Darken the background on hover if desired */
 }
 
 .dynamic-form {
@@ -98,40 +100,13 @@ body {
     width: 100%; /* Take up the full width of the container */
     border: 2px solid #3498db; /* Add a border around the form */
     padding: 20px; /* Add some padding inside the form */
-    margin-left: 800px;
+    margin-left: 25vw;
+    border-radius: 20px;
 }
 
 .qa-service-form:hover {
     background-color: blue; /* Darken the background on hover if desired */
 }
-/*@media only screen and (max-width: 768px) and (min-width: 300px) {
-    .started-container {
-        font-size: 18px;
-        margin: 2%;
-        
-    }
-
-    .development-section-three h1,
-    .qa-service-form,
-    .dev-form {
-        font-size: 25px;
-        margin-left: 0%;
-        width: 100%;
-    }
-}
-@media only screen and (max-width: 768px) and (min-width: 300px) {
-    .qa-service-form,
-    .dev-form {
-        background-color: lightblue;
-        
-    }}
-
-@media only screen and (max-width: 768px) and (min-width: 300px) {
-    .header h1 {
-        font-size: 25px;
-        margin: 2%;
-        
-    }}*/
     @media only screen and (max-width: 425px) and (min-width: 300px) {
         .tabs a{
             font-size: 15px;

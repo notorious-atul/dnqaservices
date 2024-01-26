@@ -7,9 +7,9 @@ body {
     font-family: Arial, sans-serif;
 }
 .header {
-    background-color: black;
+    background-color: purple;
     /*background-image: url('wolf.jpg');*/
-    color: white;
+    color: black;
     font-size: 20px;
     text-align: center;
     position: fixed;
@@ -21,7 +21,6 @@ body {
 
 .tabs {
 
-    border-top: 5px solid #3498db;
     display: flex;
     justify-content: left;
     padding-left: 20px;
@@ -34,16 +33,24 @@ body {
     cursor: pointer;
     text-decoration: none;
     font-size: 20px;
-    margin-top: 5px;
+    margin-top: 2px;
+    border: 2px solid white;
+    border-radius: 5px;
     
 }
+
+.tab:hover {
+    color: red;
+}
+
 .form-container {
     max-width: 900px;
-    width: 100%;
+    width: 100vw;
+    max-height: 150vh;
     padding: 10px;
     border: 2px solid #3498db;
     border-radius: 10px;
-    margin-top: 100px;
+    margin-top: 5vw;
 }
 
 form {
@@ -67,10 +74,12 @@ input[type="checkbox"] {
 button {
     background-color: #3498db;
     color: white;
-    padding: 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    width: 40%;
+    height: 4vh;
+    margin-left: 30%;
 }
 
 button:hover {
@@ -81,4 +90,36 @@ h3 {
     margin-left: 60px;
     font-size: 13px;
     margin-top: 0;
+}
+
+@media all and (max-width: 800px) {
+
+    .form-container {
+        margin-top: 10%;
+    }
+
+}
+
+@media all and (max-width: 430px) {
+
+    .form-container {
+        margin-top: 60%;
+    }
+
+}
+
+@media all and (max-width: 390px) {
+
+    .form-container {
+        margin-top: 100%;
+    }
+
+}
+
+@media all and (max-width: 375px) {
+
+    .form-container {
+        margin-top: 150%;
+    }
+
 }

@@ -14,10 +14,16 @@
     <div class="tab-container">
         <div class="menu-icon" id="menu-icon">&#9776;</div>
         <div class="tabs" id="tabs">
-            <a href="#Development" class="tab" id="tab">Development</a>
-            <a href="#QAServices" class="tab" id="tab">QA Services</a>
+        <a href="#about" class="tab" id="tab">About us</a>
+            <div class="services-dropdown-section">
+            <div class="tab" id="services-dropdown" onclick="toggleDropdown()">Services <span class="arrow">&#9662;</span></div>
+            <div class="dropdown-content" id="myDropdown">
+            <a href="#" class="tab" id="tab">Development</a>
+            <a href="#" class="tab" id="tab">QA Services</a>
+        </div>
+            </div>
             <a href="#Contactus" class="tab" id="tab">Contact us</a>
-            <a href="#lets-get-started" class="tab about-icon" id="tab" title="About Us">Back to top page</a> <!--&#9432; = information icon-->
+            <a href="started.html" class="tab about-icon" id="tab" title="About Us">Get Started!</a> <!--&#9432; = information icon-->
         </div>
      </div>
 </div>
@@ -39,7 +45,7 @@
     <div class="services-grids">
     <div class="services-grid">Software Development</div>
     <div class="services-grid">Code Management</div>
-    <div class="services-grid">Version Control management</div>
+    <div class="services-grid">Version Control Management</div>
     <div class="services-grid">Quality Assurance Services</div>
     <div class="services-grid">Infrastructure Development</div>
     <div class="services-grid">Infrastructure Management</div> 
@@ -111,6 +117,51 @@
                 });
             
             });
+
+            document.addEventListener('DOMContentLoaded', function () {
+                function toggleDropdown() {
+                    var dropdown = document.getElementById("myDropdown");
+                    var isOpen = dropdown.classList.contains("show");
+            
+                    // Explicitly open or close the dropdown
+                    if (isOpen) {
+                        dropdown.classList.remove("show");
+                    } else {
+                        dropdown.classList.add("show");
+                    }
+            
+                    // Close other open dropdowns
+                    if (!isOpen) {
+                        closeOtherDropdowns(dropdown);
+                    }
+                }
+            
+                // Close other open dropdowns
+                function closeOtherDropdowns(currentDropdown) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    for (var i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown !== currentDropdown && openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            
+                // Close the dropdown if the user clicks or taps outside of it
+                window.addEventListener('click', function (event) {
+                    if (!event.target.matches('.services-dropdown')) {
+                        closeOtherDropdowns(null);
+                    }
+                });
+            
+                // Close the dropdown if the user taps outside of it
+                window.addEventListener('touchstart', function (event) {
+                    if (!event.target.matches('.services-dropdown')) {
+                        closeOtherDropdowns(null);
+                        event.preventDefault();
+                    }
+                });
+            });            
             
     </script>
 </body>
