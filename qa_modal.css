@@ -104,22 +104,17 @@ h3 {
 
     .form-container {
         margin-top: 60%;
+        border: none;
     }
 
 }
 
-@media all and (max-width: 390px) {
-
-    .form-container {
-        margin-top: 100%;
-    }
-
-}
 
 @media all and (max-width: 375px) {
 
     .form-container {
         margin-top: 150%;
+        border: none;
     }
 
 }
@@ -128,6 +123,16 @@ h3 {
 
     .form-container {
         margin-top: 90%;
+        border: none;
+    }
+
+}
+
+@media all and (max-width: 410px) {
+
+    .form-container {
+        margin-top: 160%;
+        border: none;
     }
 
 }
