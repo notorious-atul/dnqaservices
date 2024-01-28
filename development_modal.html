@@ -9,6 +9,7 @@
 <body>
     <div class="header">
         <h1>D&QAS</h1>
+        </div>
     <div class="tabs" id="tabs">
         <a href="started.html" class="tab" id="tab">Back to options</a>
     </div>
@@ -37,16 +38,45 @@
                 <input type="checkbox" name="option4"> Server Management <h3>Our server management service delivers seamless performance, security, 
                     and scalability, ensuring the optimal functioning of your server infrastructure for uninterrupted business operations.</h3>
             </label>
-            <button type="submit" onclick="submitForm()">Submit</button>
+            <input placeholder="Enter Your Email" type="email" id="email" name="email" required autocomplete="off">
+            <button type="submit">Submit</button>
         </form>
     </div>
     <script>
-        function submitForm() {
-            // You can perform client-side validation here if needed
-
-            // Submit the form using JavaScript
-            document.getElementById('devmain').submit();
-        }
+            document.getElementById('devmain').addEventListener('submit', function (event) {
+                // Prevent the default form submission behavior
+                event.preventDefault();
+                const form = document.getElementById('devmain');
+                const selectedCheckboxes = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
+                const formData = new FormData(form);
+    
+                 // Convert FormData to plain JavaScript object
+            const formDataObject = {};
+            formData.forEach((value, key) => {
+                formDataObject[key] = value;
+            });
+    
+            formDataObject.services = selectedCheckboxes;
+        
+                   // Send form data to the server using fetcih
+            fetch('/submit-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formDataObject),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                // You can perform additional actions on success if needed
+                window.location.href = '/thanks_template.html';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Handle the error appropriately
+            });
+        });
     </script>
 </body>
 </html>

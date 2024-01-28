@@ -1,42 +1,52 @@
 body {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    flex: 1 1 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    flex-wrap: wrap;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Playfair Display', serif;
 }
+
 .header {
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+    box-sizing: border-box;
     background-color: purple;
-    /*background-image: url('wolf.jpg');*/
-    color: black;
-    font-size: 20px;
-    text-align: center;
     position: fixed;
     width: 100%;
-    top: 0;
-    left: 0;
-    /* z-index: 2; Ensure the header stays above other elements */
+    height: 60px;
+    z-index: 1;
+}
+
+.header h1 {
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 0;
+
 }
 
 .tabs {
 
     display: flex;
-    justify-content: left;
-    padding-left: 20px;
-    
+    flex: 1 1 50%;
+    width: 40%;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-left: 10px;
+    background-color: transparent;
 }
 
 .tab {
+    display: flex;
     background-color: none;
-    color: white;
+    color: black;
     cursor: pointer;
     text-decoration: none;
-    font-size: 20px;
-    margin-top: 2px;
-    border: 2px solid white;
-    border-radius: 5px;
-    
+    font-size: 30px;
 }
 
 .tab:hover {
@@ -44,23 +54,28 @@ body {
 }
 
 .form-container {
-    max-width: 900px;
-    width: 100vw;
-    max-height: 150vh;
-    padding: 10px;
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+    width: 80%;
+    box-sizing: border-box;
     border: 2px solid #3498db;
-    border-radius: 10px;
-    margin-top: 5vw;
+    border-radius: 20px;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-bottom: 0;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    background-color: transparent;
 }
 
 h2 {
     text-align: center;
     color: #3498db;
+    font-size: 40px;
 }
 
 label {
@@ -68,7 +83,7 @@ label {
 }
 
 input[type="checkbox"] {
-    margin: 30px;
+    margin: 20px;
 }
 
 button {
@@ -78,7 +93,7 @@ button {
     border-radius: 10px;
     cursor: pointer;
     width: 40%;
-    height: 4vh;
+    height: 40px;
     margin-left: 30%;
 }
 
@@ -92,47 +107,41 @@ h3 {
     margin-top: 0;
 }
 
+#email { 
+
+    background-color: transparent;
+    display: flex;
+    margin-bottom: 1%;
+    width: 30%;
+    margin-left: 7%;
+
+}
+
+input {
+    font-size: 20px;
+}
+
+@media all and (max-width: 968px) {
+
+    .tabs {
+
+        width: 100%;
+    }
+   
+}
+
 @media all and (max-width: 800px) {
 
-    .form-container {
-        margin-top: 10%;
-    }
+   .form-container {
 
-}
+    width: 100%;
+    margin-left: 0;
+   }
 
-@media all and (max-width: 430px) {
+   #email {
 
-    .form-container {
-        margin-top: 60%;
-        border: none;
-    }
-
-}
-
-
-@media all and (max-width: 375px) {
-
-    .form-container {
-        margin-top: 150%;
-        border: none;
-    }
-
-}
-
-@media all and (max-width: 500px) {
-
-    .form-container {
-        margin-top: 90%;
-        border: none;
-    }
-
-}
-
-@media all and (max-width: 410px) {
-
-    .form-container {
-        margin-top: 160%;
-        border: none;
-    }
-
+    width:60%;
+   }
+    
+   
 }
