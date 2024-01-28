@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="service_qa_style.css">
     <title>D&QA Services</title>
 </head>
 <body>
-    <div class="header">
-        <h1>D&QA Services</h1>
-    </div>
-    <div class="tabs">
-        <a href="development.html" class="tab">Development</a>
-        <a href="qaservices.html" class="tab">QA Services</a>
-        <a href="contactus.html" class="tab">Contact us</a>
+    <div class="main-heading">
+        <div class="header">
+        <h1>D&QAS</h1>
+         </div>
+    <div class="tab-container">
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        <div class="tabs" id="tabs">
+        <a href="#about" class="tab" id="tab">About us</a>
+            <div class="services-dropdown-section">
+            <div class="tab" id="services-dropdown" onclick="toggleDropdown()">Services <span class="arrow">&#9662;</span></div>
+            <div class="dropdown-content" id="myDropdown">
+            <a href="service_dev.html" class="tab" id="tab">Development</a>
+            <a href="service_qa.html" class="tab" id="tab">QA Services</a>
+        </div>
+            </div>
+            <a href="#Contactus" class="tab" id="tab">Contact us</a>
+            <a href="started.html" class="tab about-icon" id="tab" title="About Us">Get Started!</a> <!--&#9432; = information icon-->
+        </div>
+     </div>
     </div>
 
-    <div class="qaservices" id="QAServices">
-        <h4>QA Services</h4>
+<div class="qaservices" id="QAServices">
+        <h2>QA Services</h2>
 </div>
 
 <div class = "form" id="form">
@@ -50,59 +62,103 @@
             <li>&#10003; Unparalleled Expertise</li>
             <li>&#10003; Innovative Solutions</li>
             <li>&#10003; Customer-Centric Approach</li>
-            <li>&#10003; Agile and Efficient Processes</li>
-            <li>&#10003; Customized Solutions</li>
-            <li>&#10003; Unrivaled Support and Service Quality</li>
+            <li>&#10003; Maximum Test Coverage</li>
+            <li>&#10003; Automation Test Scripts</li>
+            <li>&#10003; Regression Suites</li>
           </ul>
           
 </div>
 
-<div class="sdet-services">
-    <h4>Automate your site for Testing!!!</h4>
-    <p>Empower your testing endeavors with our automation testing suite services, offering efficiency, 
-        accuracy, and rapid test execution to elevate the quality of your software while saving time and resources.</p>
+<div class="steps">
+    <h2>How to Get Started?</h2>
+    <ul>
+        <li>Go to "Get Started!" option at the top or in the menu for mobile view.</li>
+        <li> You will be re-directed to system-fetching-information window where you can choose the services. </li>
+        <li> Click on any of "Quality Assurance"</li>
+        <li> Fill the form</li>
+        <li> Click on Submit button</li>
+        <li> After submission we will reach out to you with our best prices that suits your development project</li>
+    </ul>
 </div>
 
-
-<div class="contact-section" id="Contactus">
-    <h3>Contact Us</h3>
-    <p>For inquiries and support, feel free to reach out to us:</p>
-    <div class="contact-info">
-        <p>Email: <a href="mailto:atul4055@gmail.com">atul4055@gmail.com</a></p>
-        <p>office location: to be implemented</p>
-    </div>
-</div>
 <footer class="footer-section">
     <p>&copy; 2024 D&QA Services. All rights reserved.</p>
     <!--<img src="path/to/your/logo.png" alt="Company Logo">-->
 </footer>
+
 <script>
 
-function submitForm() {
-    // You can perform client-side validation here if needed
+    function submitForm() {
+        // You can perform client-side validation here if needed
 
-    // Submit the form using JavaScript
-    document.getElementById('bookNowForm').submit();
-}
+        // Submit the form using JavaScript
+        document.getElementById('bookNowForm').submit();
+    }
 
-document.getElementById('menu-icon').addEventListener('click', function () {
-    var tabs = document.getElementById('tabs');
-    tabs.classList.toggle('show');
-});
-
-// Smooth scroll behavior for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+    document.getElementById('menu-icon').addEventListener('click', function () {
         var tabs = document.getElementById('tabs');
-        tabs.classList.remove('show');
+        tabs.classList.toggle('show');
+    });
+
+    // Smooth scroll behavior for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+            var tabs = document.getElementById('tabs');
+            tabs.classList.remove('show');
+            });
+        
         });
-    
-    })
+
+        document.addEventListener('DOMContentLoaded', function () {
+            function toggleDropdown() {
+                var dropdown = document.getElementById("myDropdown");
+                var isOpen = dropdown.classList.contains("show");
+        
+                // Explicitly open or close the dropdown
+                if (isOpen) {
+                    dropdown.classList.remove("show");
+                } else {
+                    dropdown.classList.add("show");
+                }
+        
+                // Close other open dropdowns
+                if (!isOpen) {
+                    closeOtherDropdowns(dropdown);
+                }
+            }
+        
+            // Close other open dropdowns
+            function closeOtherDropdowns(currentDropdown) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown !== currentDropdown && openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        
+            // Close the dropdown if the user clicks or taps outside of it
+            window.addEventListener('click', function (event) {
+                if (!event.target.matches('.services-dropdown')) {
+                    closeOtherDropdowns(null);
+                }
+            });
+        
+            // Close the dropdown if the user taps outside of it
+            window.addEventListener('touchstart', function (event) {
+                if (!event.target.matches('.services-dropdown')) {
+                    closeOtherDropdowns(null);
+                    event.preventDefault();
+                }
+            });
+        });            
+        
 </script>
 
 </body>

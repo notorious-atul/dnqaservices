@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="service_dev_style.css">
     <title>D&QA Services</title>
 </head>
 <body>
+    
+<div class="main-heading">
     <div class="header">
-        <h1>D&QA Services</h1>
+    <h1>D&QAS</h1>
+     </div>
+<div class="tab-container">
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+    <div class="tabs" id="tabs">
+    <a href="#about" class="tab" id="tab">About us</a>
+        <div class="services-dropdown-section">
+        <div class="tab" id="services-dropdown" onclick="toggleDropdown()">Services <span class="arrow">&#9662;</span></div>
+        <div class="dropdown-content" id="myDropdown">
+        <a href="service_dev.html" class="tab" id="tab">Development</a>
+        <a href="service_qa.html" class="tab" id="tab">QA Services</a>
     </div>
-    <div class="tabs">
-        <a href="development.html" class="tab">Development</a>
-        <a href="qaservices.html" class="tab">QA Services</a>
-        <a href="contactus.html" class="tab">Contact us</a>
+        </div>
+        <a href="#Contactus" class="tab" id="tab">Contact us</a>
+        <a href="started.html" class="tab about-icon" id="tab" title="About Us">Get Started!</a> <!--&#9432; = information icon-->
     </div>
+ </div>
+</div>
 
-    <div class="development-section" id="Development">
-        <h3>Development Services</h3>
+<div class="development-section" id="Development">
+        <h2>Development Services</h2>
 </div>
 <div class = "form" id="form">
      <form id="bookNowForm" action="/submit" method="post">
@@ -27,30 +40,106 @@
                 </div>
     </form>
 </div>
-    <div class="development-section" id="development">
-        <h3>Development Services</h3>
+    <div class="development-services" id="development">
         <p>Our development services are designed to bring your ideas to life. With a focus on innovation and quality, we offer a range of solutions to meet your specific needs.</p>
-
-        <div class="service">
-            <h4>SAAS Project Development</h4>
-            <p>Looking to launch your own Software as a Service (SAAS) project? Our expert developers can help you design, develop, and deploy your SAAS solution, ensuring scalability, security, and user satisfaction.</p>
+        <ul>
+            <li>&#10003; SAAS Project Development</li>
+            <li>&#10003; Blog Making And Content Management</li>
+            <li>&#10003; Portfolios For Professional Growth</li>
+            <li>&#10003; Database Management</li>
+            <li>&#10003; infrastructure Development</li>
+        </ul>
         </div>
-
-        <div class="service">
-            <h4>Blog Making and Content Management</h4>
-            <p>Engage your audience with a well-designed blog. From creating the initial layout to implementing content management systems, we provide comprehensive blog making services. Manage your content easily and effectively.</p>
+        <div class="steps">
+            <h2>How to Get Started?</h2>
+            <ul>
+                <li>Go to "Get Started!" option at the top or in the menu for mobile view.</li>
+                <li> You will be re-directed to system-fetching-information window where you can choose the services. </li>
+                <li> Click on any of "Development" Service.</li>
+                <li> Fill the form</li>
+                <li> Click on Submit button</li>
+                <li> After submission we will reach out to you with our best prices that suits your development project</li>
+            </ul>
         </div>
-
-        <!-- Add more services as needed -->
-
-        <p>At D&QA Services, we go beyond traditional development. We strive to understand your business goals and deliver tailored solutions that drive success. Whether you're starting a new project or enhancing an existing one, our development team is here to turn your vision into reality.</p>
-    </div>
    
     <footer class="footer-section">
         <p>&copy; 2024 D&QA Services. All rights reserved.</p>
         <!--<img src="path/to/your/logo.png" alt="Company Logo">-->
     </footer>
-    
+    <script>
+
+        function submitForm() {
+            // You can perform client-side validation here if needed
+
+            // Submit the form using JavaScript
+            document.getElementById('bookNowForm').submit();
+        }
+
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            var tabs = document.getElementById('tabs');
+            tabs.classList.toggle('show');
+        });
+
+        // Smooth scroll behavior for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                var tabs = document.getElementById('tabs');
+                tabs.classList.remove('show');
+                });
+            
+            });
+
+            document.addEventListener('DOMContentLoaded', function () {
+                function toggleDropdown() {
+                    var dropdown = document.getElementById("myDropdown");
+                    var isOpen = dropdown.classList.contains("show");
+            
+                    // Explicitly open or close the dropdown
+                    if (isOpen) {
+                        dropdown.classList.remove("show");
+                    } else {
+                        dropdown.classList.add("show");
+                    }
+            
+                    // Close other open dropdowns
+                    if (!isOpen) {
+                        closeOtherDropdowns(dropdown);
+                    }
+                }
+            
+                // Close other open dropdowns
+                function closeOtherDropdowns(currentDropdown) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    for (var i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown !== currentDropdown && openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            
+                // Close the dropdown if the user clicks or taps outside of it
+                window.addEventListener('click', function (event) {
+                    if (!event.target.matches('.services-dropdown')) {
+                        closeOtherDropdowns(null);
+                    }
+                });
+            
+                // Close the dropdown if the user taps outside of it
+                window.addEventListener('touchstart', function (event) {
+                    if (!event.target.matches('.services-dropdown')) {
+                        closeOtherDropdowns(null);
+                        event.preventDefault();
+                    }
+                });
+            });            
+            
+    </script>
     
 </body>
 </html>

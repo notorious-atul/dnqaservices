@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .box {
+      flex: 1 1 200px; /* Flex properties: flex-grow, flex-shrink, flex-basis */
+      margin: 0;
+      padding: 10px;
+      background-color: lightblue;
+      box-sizing: border-box;
+    }
+
+    .box p {
+        background-color: red;
+    }
+
+    .box img {
+      max-width: 100%; /* Make sure images are responsive */
+      height: auto;
+      display: block; /* Remove extra space below images in some cases */
+    }
+  </style>
+  <title>Responsive Flexbox Example</title>
+</head>
+<body>
+  <div class="box">
+    <img src="example.jpg" alt="Example Image">
+    <p>Some text content hereiyfgyvkhbutcikuhcykhbjgchgj tdfiukhbhfcugk iugcycvkjnbxytuyghkbngcv  ifyckbvyjxyughkbvhxjcmhjbkhiyu ufcyvgkjb fxjcuiyukbvjyfhvuk uygiukdcjuig...</p>
+  </div>
+  <div class="box">
+    <img src="example.jpg" alt="Example Image">
+    <p>Some text content here...</p>
+  </div>
+  <!-- Additional boxes here -->
+</body>
+</html>

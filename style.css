@@ -1,10 +1,14 @@
 /*background-image: url('wolf.jpg');*/
 body {
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
     margin: 0;
     font-family: 'Playfair Display', serif;
     overflow-x: hidden;
     width: 100%;
     background-color: black;
+    flex-wrap: wrap;
 }
 
 /*.lets-get-started {
@@ -34,458 +38,64 @@ body {
 .lets-get-started a:hover {
     color: blue;
 }*/
-
 a {
     text-decoration: none;
 }
 
 .main-heading {
-    /*box-sizing: border-box;
-    width: 100%;
-    height: 55px;
-    top: 0;
-    left: 0;
-    background-color: rgb(237, 229, 237); 
-    position: fixed;
-    z-index: 1;*/
     display: flex;
-    width: 100vw;
-    height: 5vh;
-    background-color: violet;
+    flex: 1 1 100%;
+    width: 100%;
+    height: 50px;
+    background-color: purple;
     position: fixed;
+    justify-content: center;
     z-index: 1;
     top: 0;
     flex-direction: column;
 }
 
-.header {
+.header h1 {
     background-color: transparent;
-    padding-left: 10px;
-    position: absolute;
-    width: 15%;
+    color: white;
+    width: 8%;
     height: 35px;
-    top: 15px;
-    left: 80px;
+    font-size: 30px;
+    margin-left: 30px;
     box-sizing: border-box;
-    text-align: left;
-    transition: transform 0.1s ease-in-out;
    
-}
-.header h1{
-    /*background-image: url('wolf.jpg');*/
-    color: rgb(18, 1, 1);
-    font-size: 25px;
-    padding: 1px;
-    margin: 1px;
-    width: fit-content;
-    background-color: transparent;
-}
-
-.header:hover {
-    transform: scale(1.1);
 }
 
 .tab-container {
+    display: flex;
+    flex: 1 1 100%;
     background-color: transparent;
-    padding-left: 10px;
     position: absolute;
     width: 45%;
     height: 50px;
-    top: 0;
     left: 50%;
     box-sizing: border-box;
 }
 
 .tabs {
     display: flex;
+    flex: 1 1 100%;
     justify-content: space-between;
-    margin-top: 8px;
+    margin-top: 0;
     position: relative;
-    font-size: 1.5vw;
+    font-size: 30px;
+    background-color: transparent;
 }
 
 .tab {
     padding: 5px 5px;
     background-color: transparent;
-    color: rgb(11, 1, 1);
+    color: white;
     cursor: pointer;
 }
 
 .tab:hover {
     background-color: transparent; /* Darken the background on hover if desired */
-}
-
-/* ... Existing styles ... */
-
-.services-section h2 {
-    font-size: 4vw;
-    width: 70vw;
-    color: purple;
-    border-bottom:5px solid green;
-    background-color: transparent;
-    margin-left: 2%;
-    
-}
-
-.services-section p {
-    font-size: 3vw;
-    color: white;
-    margin-left: 2%;
-    width: 72vw;
-    background-color: transparent;
-}
-
-#typewriter {
-    font-size: 9vw;
-    white-space: nowrap;
-    overflow: hidden;
-    background-color: transparent;
-
-}
-
-/* ... Existing styles ... */
-
-.services-section {
-    /*background-color: transparent;
-    color: white;
-    font-size: 40px;
-    padding: 20px;
-    margin-top: 20px;
-    margin-left: 8%;
-    box-sizing: border-box;
-    position: relative;
-    width: 80%;*/
-    display: flex;
-    width: 80vw;
-    height: 90vh;
-    background-color: transparent;
-    flex-direction: column;
-    margin-top: 70px;
-    position: relative;
-    margin-left: 10%;
-    margin-bottom: 0;
-
-}
-
-.services-grid:hover {
-    transform: scale(1.1);
-}
-
-.services-section-two {
-
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
-    width: 80vw;
-    height: 100vh;
-    margin-left: 10%;
-}
-
-.services-grids {
-
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 5%;
-    color: black;
-    background-color: transparent;
-    grid-template-rows: 180px 200px 200px;
-    width: 70vw;
-    height: 80vh;
-    margin-left: 5%;
-
-} 
-.services-grid {
-
-    border: 1px solid red;
-    font-size: 2vw;
-    background-color: white;
-    text-align: center;
-    padding-top: 20%;
-    transition: transform 0.1s ease-in-out;
-
-} 
-
-.motivational-section {
-    box-sizing: border-box;
-    width: 70vw;
-    height: 90vh;
-    background-color: transparent;
-    margin-left: 14%;
-
-}
-
-.motivational-section h3 {
-    font-size: 8vh;
-    color: purple;
-}
-.motivational-section p {
-    font-size: 6vh;
-    color: white;
-}
-
-@media all and (max-width:876px) {
-
-    .services-grids {
-        grid-template-columns: 1fr;
-        grid-template-rows: 90px 90px 90px 90px 90px 90px 90px 90px;
-        gap: 1%;
-        width: 90%;
-        
-    }
-    .services-grid{
-        font-size: 20px;
-        padding: 10px;
-    }
-
-    .services-section-two {
-        
-        height: 110vh;
-        width: 80vw;
-    }
-
-    .services-section {
-        height: 80vh;
-    }
-
-    .services-section h2 {
-        font-size: 6vw;
-
-    }
-
-    .services-section p {
-        font-size: 35px ;
-
-    }
-
-    .main-heading {
-        height: 7vh;
-    }
-
-}
-
-@media all and (max-width: 1313px) {
-
-    .motivational-section h3 {
-        font-size: 6vh;
-    }
-    .motivational-section p {
-        font-size: 5vh;
-    }
-    
-}
-@media all and (max-width: 958px) {
-
-    .motivational-section h3 {
-        font-size: 5vh;
-    }
-    .motivational-section p {
-        font-size: 4vh;
-    }
-    
-}
-
-@media all and (max-height: 800px) {
-
-   .motivational-section {
-    margin-top: 60%;
-   }
-   .main-heading {
-    min-height: 8vh;
-} 
-}
-
-@media all and (max-height: 900px) {
-
-    .services-section-two {
-         margin-top: 25%;
-
-    } 
-
- }
-
-@media all and (max-width:1489px) {
-
-
-    .services-section {
-        height: 80vh;
-    }
-
-    .services-section h2 {
-        font-size: 6vw;
-
-    }
-
-    .services-section p {
-        font-size: 35px ;
-
-    }
-
-    .main-heading {
-        height: 7vh;
-    }
-
-}
-
-@media all and (max-width:415px) {
-
-    .services-section-two {
-        margin-top: 0%;
-
-   } 
-   .main-heading {
-    margin-bottom: 0;
-   } 
-
-}
-
-
-@media all and (max-width:430px) {
-
-
-    .services-section-two {
-        
-        height: 95vh;
-        width: 80vw;
-    }
-
-    .services-section {
-        height: 80vh;
-    }
-
-    .services-section h2 {
-        font-size: 10vw;
-
-    }
-
-    .services-section p {
-        font-size: 6vw ;
-        line-height: 3vh;
-
-    }
-
-    .main-heading {
-        height: 7vh;
-    }
-
-    .motivational-section h3 {
-        font-size: 6vh;
-    }
-    .motivational-section p {
-        font-size: 3vh;
-    }
-    
-}
-
-.services-section-two h3 {
-    color: purple;
-    font-size: 8vw;
-    text-align: center;
-    margin-top: 0;
-    background-color: transparent;
-    
-}  
-
-.footer-section {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-}
-
-.footer-section p {
-    margin: 0;
-}
-
-.footer-section img {
-    max-width: 100px; /* Adjust the maximum width of your logo as needed */
-    margin-top: 10px; /* Add margin above the logo */
-}
-
-.menu-icon {
-    display: none;
-}
-
-
-  @media all and (max-width: 1450px) {
-
-     .tabs {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        width: 60%;
-        position: absolute;
-        top: 50px; /* Adjust according to your header height */
-        left: 30%;
-        background-color: #f4eeee;
-        margin-top: 0;
-    }
-
-    .tabs.show {
-        display: flex;
-    }
-
-    .tab:hover {
-        color: #ea9393;
-    }
-
-    .tab {
-        padding: 15px;
-        text-align: center;
-        color: black;
-        text-decoration: none;
-        font-size: 3vw;
-        box-sizing: border-box;
-        margin-top: 0;
-    }
-
-    .header {
-        position: fixed;
-
-    }
-
-    .menu-icon {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 50px;
-        font-size: 50px;
-        color: white;
-        cursor: pointer;
-    }
-
-    }
-                                                        
-
-/* Add this style for the input container */
-.input-container {
-    display: flex;
-    gap: 0; /* Remove the gap between input and button */
-    justify-content: center;
-    margin-top: 55px;
-}
-
-/* Style for the email input */
-#email {
-    border-radius: 30px 0 0 30px; /* Rounded corners on the left */
-    padding: 10px; /* Adjust padding as needed */
-    border: 1px solid #ccc; /* Add a border for better visibility */
-    width: 20%; /* Adjust the width as needed */
-    height: 100px;
-    font-size: 30px;
-    max-width: none;
-    max-height: none;
-}
-
-/* Style for the Book Now button */
-#bookNowForm button {
-    border-radius: 0 30px 30px 0; /* Rounded corners on the right */
-    background-color: black; /* Set the background color to black */
-    color: white; /* Set text color to white */
-    padding: 10px; /* Adjust padding as needed */
-    cursor: pointer;
-    width: 20%;
-    font-size: 30px;
 }
 
 
@@ -530,3 +140,281 @@ a {
     top: 50%;
     transform: translateY(-50%);
 }
+
+
+.footer-section {
+    display: flex;
+    flex: 1 1 100%;
+    background-color: purple;
+    color: white;
+    justify-content: center;
+}
+
+.footer-section p {
+    margin: 0;
+}
+
+.footer-section img {
+    max-width: 100px; /* Adjust the maximum width of your logo as needed */
+    margin-top: 10px; /* Add margin above the logo */
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+
+#typewriter {
+    font-size: 9vw;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: transparent;
+
+}
+
+/* ... Existing styles ... */
+
+.services-section {
+    display: flex;
+    flex: 1 1 100% ;
+    flex-direction: column;
+    background-color: transparent;
+    margin-top: 40px;
+   
+    margin-left: 0;
+    padding-left: 10%;
+
+}
+.services-section h2 {
+    font-size: 4vw;
+    width: 70vw;
+    color: purple;
+    border-bottom:5px solid green;
+    background-color: transparent;
+    margin-left: 2%;
+    
+}
+
+.services-section p {
+    font-size: 3vw;
+    color: white;
+    margin-left: 2%;
+    width: 72vw;
+    background-color: transparent;
+}
+
+.services-grid:hover {
+    transform: scale(1.1);
+}
+
+.services-section-two {
+
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    
+}
+
+.services-section-two h3 {
+
+    font-size: 80px;
+    color: purple;
+    text-align: center;
+    margin-top: 30px;
+ 
+}
+
+.services-grids {
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5%;
+    color: black;
+    background-color: transparent;
+    grid-template-rows: 180px 200px 200px;
+    width: 70vw;
+    height: 80vh;
+    margin-left: 15%;
+    margin-bottom: 8%;
+
+} 
+.services-grid {
+
+    border: 1px solid red;
+    font-size: 25px;
+    background-color: white;
+    text-align: center;
+    padding-top: 20%;
+    transition: transform 0.1s ease-in-out;
+
+} 
+
+.motivational-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    padding-bottom: 20px;
+    padding-left: 10%;
+
+}
+
+.motivational-section h3 {
+    font-size: 80px;
+    color: purple;
+    margin: 0;
+}
+.motivational-section p {
+    font-size: 50px;
+    color: white;
+}
+
+@media all and (max-width: 1450px) {
+
+    .tabs {
+       display: none;
+       flex-direction: column;
+       align-items: center;
+       width: 50%;
+       position: absolute;
+       top: 50px; /* Adjust according to your header height */
+       left: 32%;
+       background-color: #f4eeee;
+       margin-top: 0;
+   }
+
+   .tabs.show {
+       display: flex;
+   }
+
+
+   .tab {
+       padding: 15px;
+       text-align: center;
+       color: black;
+       text-decoration: none;
+       font-size: 34px;
+       box-sizing: border-box;
+       margin-top: 0;
+   }
+
+   .menu-icon {
+       display: block;
+       position: absolute;
+       right: 100px;
+       bottom: 2px;
+       font-size: 44px;
+       color: black;
+       cursor: pointer;
+       background-color: transparent;
+   }
+   
+   .arrow {
+    left: 90%;
+}
+}
+
+@media all and (max-width: 768px) {
+
+   
+    .tab {
+        font-size: 18px;
+        margin-top: 0;
+    }
+
+    .services-grids {
+        grid-template-rows: auto; /* Set rows to "auto" for automatic flow */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Allow items to flow into columns */
+        gap: 0;
+    }
+
+    .services-section-two h3 {
+        font-size: 40px;
+    }
+
+    .motivational-section h3 {
+        font-size: 50;
+    }
+
+    .motivational-section p {
+        font-size: 30px;
+    }
+}
+
+@media all and (max-width: 480px) {
+
+   
+    .arrow {
+        left: 85%;
+    }
+
+    .tabs {
+        left: 15%;
+    }
+
+    .menu-icon {
+        right: 50px;
+    } 
+
+    .services-section h2 {
+        font-size: 30px;
+    }
+
+    .services-section p{
+        font-size: 20px;
+    }
+
+    .services-grid {
+        font-size: 15px;
+        padding-top: 40%;
+        
+    }
+    .motivational-section h3 {
+        font-size: 40px;
+    }
+
+    .motivational-section p {
+        font-size: 30px;
+    }
+
+    .services-grids {
+        grid-template-rows: auto; /* Set rows to "auto" for automatic flow */
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Allow items to flow into columns */
+        gap: 0;
+    }
+
+}
+                                                        
+
+    .input-container {
+        display: flex;
+        height: 100px;
+        background-color: transparent;
+        gap: 0; /* Remove the gap between input and button */
+        justify-content: center;
+        margin-top: 0;
+    }
+    
+    /* Style for the email input */
+    #email {
+        border-radius: 30px 0 0 30px; /* Rounded corners on the left */
+        border: 1px solid purple; /* Add a border for better visibility */
+        width: 300px; /* Adjust the width as needed */
+        font-size: 25px;
+        height: 96px;
+    }
+    
+    /* Style for the Book Now button */
+    #bookNowForm button {
+        border-radius: 0 30px 30px 0; /* Rounded corners on the right */
+        border: 1px solid purple;
+        background-color: black; /* Set the background color to black */
+        color: white; /* Set text color to white */
+        cursor: pointer;
+        width: 40%;
+        font-size: 25px;
+    }
