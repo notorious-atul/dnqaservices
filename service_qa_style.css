@@ -342,18 +342,25 @@ a {
 
     .qaservices h2 {
         font-size: 50px;
-        padding: 14%;
+        padding-top: 14%;
     }
 
-    .testing-type h3, .testing-type ul {
+    .testing-type ul{
         font-size: 30px;
+
     }
+
     .steps h3 , .steps ul{
         font-size: 30px;
     }
 
-    .methodology h4, .methodology ul, .methodology p{
+    .methodology ul, .methodology p{
         font-size: 30px;
+    }
+
+    .methodology h4{
+        font-size: 40px;
+
     }
 
 }
