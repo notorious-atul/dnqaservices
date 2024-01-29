@@ -29,7 +29,7 @@ a {
 }
 
 .header h1 {
-    background-color: blue;
+    background-color: transparent;
     color: white;
     height: 35px;
     font-size: 30px;
@@ -41,7 +41,7 @@ a {
 
 .tab-container {
     display: flex;
-    background-color: pink;
+    background-color: transparent;
     position: relative;
     width: 45%;
     height: 50px;
@@ -207,7 +207,7 @@ a {
     grid-template-columns: repeat(4,1fr);
     gap: 3%;
     color: black;
-    background-color: blueviolet;
+    background-color: transparent;
     grid-template-rows: 180px 180px 10px;
     width: 80%;
     margin-left: 12%;
