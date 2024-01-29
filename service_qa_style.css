@@ -183,8 +183,8 @@ a {
     display: flex;
     flex: 1 1 100%;
     flex-direction: column;
-    background-color: rgb(46, 152, 104);
-    color: black;
+    background-color: transparent;
+    color: white;
     font-size: 40px;
     margin-top: 0;
     padding-bottom: 10px;
@@ -335,6 +335,10 @@ a {
     .menu-icon {
         right: 50px;
     } 
+
+    .dropdown-content {
+        margin-top: 40px;
+    }
 
     #email {
         width:200px;

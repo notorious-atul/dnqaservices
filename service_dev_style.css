@@ -318,6 +318,10 @@ a {
         right: 50px;
     } 
 
+    .dropdown-content {
+        margin-top: 40px;
+    }
+
     .development-section h2 {
 
         font-size: 40px;
