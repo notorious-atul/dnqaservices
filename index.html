@@ -11,10 +11,10 @@
 <div class="main-heading">
         <div class="header">
         <h1>D&QAS</h1></div>
-    <div class="tab-container">
+    <div class="tab-container">    
         <div class="menu-icon" id="menu-icon">&#9776;</div>
         <div class="tabs" id="tabs">
-        <a href="#about" class="tab" id="tab">About us</a>
+        <a href="index.html" class="tab" id="tab">Home</a>
             <div class="services-dropdown-section">
             <div class="tab" id="services-dropdown" onclick="toggleDropdown()">Services <span class="arrow">&#9662;</span></div>
             <div class="dropdown-content" id="myDropdown">
@@ -25,7 +25,22 @@
             <a href="#Contactus" class="tab" id="tab">Contact us</a>
             <a href="started.html" class="tab about-icon" id="tab" title="About Us">Get Started!</a> <!--&#9432; = information icon-->
         </div>
+        </div>
      </div>
+</div>
+
+<div class="side-menu" id="side-menu">
+    <div class="close-icon" id="close-icon">&times;</div>
+    <a href="index.html" class="side-tab" id="tab">Home</a>
+    <div class="services-dropdown-section">
+        <div class="tab" id="services-dropdown" onclick="toggleDropdown()">Services <span class="arrow">&#9662;</span></div>
+        <div class="dropdown-content" id="myDropdown">
+            <a href="service_dev.html" class="tab" id="tab">Development</a>
+            <a href="service_qa.html" class="tab" id="tab">QA Services</a>
+        </div>
+    </div>
+    <a href="#Contactus" class="side-tab" id="tab">Contact us</a>
+    <a href="started.html" class="side-tab" id="tab" title="About Us">Get Started!</a>
 </div>
 <!--<div class="lets-get-started" id="lets-get-started">
        <a href="started.html" class="tab-new" id="tab-new">Get Started!!</a>
@@ -119,49 +134,77 @@
             });
 
             document.addEventListener('DOMContentLoaded', function () {
-                function toggleDropdown() {
-                    var dropdown = document.getElementById("myDropdown");
-                    var isOpen = dropdown.classList.contains("show");
-            
-                    // Explicitly open or close the dropdown
-                    if (isOpen) {
-                        dropdown.classList.remove("show");
-                    } else {
-                        dropdown.classList.add("show");
-                    }
-            
-                    // Close other open dropdowns
-                    if (!isOpen) {
-                        closeOtherDropdowns(dropdown);
-                    }
+                var menuIcon = document.getElementById('menu-icon');
+                var sideMenu = document.getElementById('side-menu');
+                var closeIcon = document.getElementById('close-icon');
+    
+                menuIcon.addEventListener('click', function () {
+                    sideMenu.style.left = '0';
+                });
+    
+                closeIcon.addEventListener('click', function () {
+                    sideMenu.style.left = '-250px';
+                });
+            });
+    
+            function toggleDropdown() {
+                var dropdown = document.getElementById("myDropdown");
+                var isOpen = dropdown.classList.contains("show");
+    
+                // Explicitly open or close the dropdown
+                if (isOpen) {
+                    dropdown.classList.remove("show");
+                } else {
+                    dropdown.classList.add("show");
                 }
-            
+    
                 // Close other open dropdowns
-                function closeOtherDropdowns(currentDropdown) {
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    for (var i = 0; i < dropdowns.length; i++) {
-                        var openDropdown = dropdowns[i];
-                        if (openDropdown !== currentDropdown && openDropdown.classList.contains('show')) {
-                            openDropdown.classList.remove('show');
-                        }
+                if (!isOpen) {
+                    closeOtherDropdowns(dropdown);
+                }
+            }
+    
+            function closeOtherDropdowns(currentDropdown) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown !== currentDropdown && openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
                     }
                 }
+            }
             
-                // Close the dropdown if the user clicks or taps outside of it
-                window.addEventListener('click', function (event) {
-                    if (!event.target.matches('.services-dropdown')) {
-                        closeOtherDropdowns(null);
+                // Close the side menu if the window is resized beyond 1450px
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth > 1450) {
+                        sideMenu.style.left = '-250px';
                     }
                 });
-            
-                // Close the dropdown if the user taps outside of it
-                window.addEventListener('touchstart', function (event) {
-                    if (!event.target.matches('.services-dropdown')) {
-                        closeOtherDropdowns(null);
-                        event.preventDefault();
-                    }
-                });
-            });            
+    
+            window.addEventListener('resize', function () {
+                var tabs = document.getElementById('tabs');
+                var sideMenu = document.getElementById('side-menu');
+    
+                if (window.innerWidth <= 1450) {
+                    tabs.style.display = 'none';
+                    sideMenu.style.left = '-250px';
+                } else {
+                    tabs.style.display = 'flex';
+                }
+            });
+    
+            // Handle initial state based on window width
+            window.addEventListener('DOMContentLoaded', function () {
+                var tabs = document.getElementById('tabs');
+                var sideMenu = document.getElementById('side-menu');
+    
+                if (window.innerWidth <= 1450) {
+                    tabs.style.display = 'none';
+                    sideMenu.style.left = '-250px';
+                } else {
+                    tabs.style.display = 'flex';
+                }
+            });      
             
     </script>
 </body>
