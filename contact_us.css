@@ -1,12 +1,16 @@
 body {
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
     margin: 0;
     font-family: 'Playfair Display', serif;
     overflow-x: hidden;
     width: 100%;
+    box-sizing: border-box;
     background-color: black;
-    display: flex;
     flex-wrap: wrap;
 }
+
 a {
     text-decoration: none;
 }
@@ -63,35 +67,7 @@ a {
 }
 
 .tab:hover {
-    background-color: transparent; /* Darken the background on hover if desired */
-}
-
-/* Add this style for the input container */
-.input-container {
-    display: flex;
-    gap: 0; /* Remove the gap between input and button */
-    justify-content: center;
-}
-
-/* Style for the email input */
-#email {
-    border-radius: 30px 0 0 30px; /* Rounded corners on the left */
-    padding: 10px; /* Adjust padding as needed */
-    border: 1px solid #ccc; /* Add a border for better visibility */
-    width: 20%; /* Adjust the width as needed */
-    height: 100px;
-    font-size: 30px;
-}
-
-/* Style for the Book Now button */
-#bookNowForm button {
-    border-radius: 0 30px 30px 0; /* Rounded corners on the right */
-    background-color: black; /* Set the background color to black */
-    color: white; /* Set text color to white */
-    padding: 10px; /* Adjust padding as needed */
-    cursor: pointer;
-    width: 20%;
-    font-size: 30px;
+    color: lightblue; /* Darken the background on hover if desired */
 }
 
 
@@ -106,13 +82,13 @@ a {
     display: none;
     position: absolute;
     background-color: #e7cece;
+    margin-top: 40px;
     min-width: 100px;
-    margin-top: 4vh;
     z-index: 1;
 }
 
 .dropdown-content a {
-    color: blue;
+    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -137,115 +113,31 @@ a {
     transform: translateY(-50%);
 }
 
+.menu-icon {
+    display: none;
+}
 
 .footer-section {
     display: flex;
     flex: 1 1 100%;
+    flex-direction: column;
+    box-sizing: border-box;
     background-color: purple;
     color: white;
     justify-content: center;
+    margin-top: 50%;
+    position: relative;
 }
 
 .footer-section p {
     margin: 0;
+    text-align: center;
 }
 
 .footer-section img {
     max-width: 100px; /* Adjust the maximum width of your logo as needed */
     margin-top: 10px; /* Add margin above the logo */
 }
-
-.menu-icon {
-    display: none;
-}
-
-
-.development-section {
-    display: flex;
-    flex: 1 1 100%;
-    margin-top:40px;
-    padding: 3%;
-    height: 200px;
-    background-color: transparent;
-    color: violet;
-    box-sizing: border-box;   
-    justify-content: center;
-    
-}
-.development-section h2 {
-    font-size: 80px;
-    background-color: transparent;
-    margin-top: 0;
-    
-}
-
-.development-services {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 100%;
-    font-size: 40px;
-    background-color: rgb(84, 15, 84);
-    color: white;
-    padding:4%;
-    box-sizing: border-box;
-    margin-top: 5%;
- 
-}
-.development-services ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-}
-
-.form {
-    background-color: transparent;
-    display: flex;
-    flex: 1 1 100%;
-    margin-top: 0;
-    justify-content: center;
-    box-sizing: border-box;
-
-}
-
-.input-container {
-    display: flex;
-    height: 100px;
-    background-color: transparent;
-    gap: 0; /* Remove the gap between input and button */
-    justify-content: center;
-    margin-top: 0;
-}
-
-/* Style for the email input */
-#email {
-    border-radius: 30px 0 0 30px; /* Rounded corners on the left */
-    border: 1px solid purple; /* Add a border for better visibility */
-    width: 300px; /* Adjust the width as needed */
-    font-size: 25px;
-    height: 80px;
-}
-
-/* Style for the Book Now button */
-#bookNowForm button {
-    border-radius: 0 30px 30px 0; /* Rounded corners on the right */
-    border: 1px solid purple;
-    background-color: black; /* Set the background color to black */
-    color: white; /* Set text color to white */
-    cursor: pointer;
-    width: 40%;
-    font-size: 25px;
-}
-
-.steps {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 100%;
-    background-color: white;
-    color: black;
-    padding: 5%;
-    font-size: 40px;
-}
-
 
 
 .side-menu {
@@ -258,6 +150,40 @@ a {
     padding-top: 60px;
     color: white;
     transition: 0.3s;
+}
+
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.contact-section h1{
+    font-size: 80px;
+    
+}
+
+.contact-section p{
+    font-size: 40px;
+}
+
+.contact-info{
+
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    color: white;
+
+}
+
+.contact-info p {
+
+    font-size: 40px; 
+
 }
 
 
@@ -333,8 +259,32 @@ a {
 
         right: 220px;
     }
-}
+    .contact-section {
+        margin-top: 80px;
+    }
 
+    .contact-section h1{
+        font-size: 50px;
+        
+    }
+    
+    .contact-section p{
+        font-size: 30px;
+        padding: 25px;
+    }
+    
+    
+    .contact-info p {
+    
+        font-size: 30px; 
+        padding: 25px;
+    
+    }
+    .footer-section{
+        margin-top: 100%;
+    }
+    
+}
 
 @media all and (max-width: 480px) {
 
@@ -348,26 +298,4 @@ a {
         right: 110px;
     }
 
-
-    .development-section h2 {
-
-        font-size: 50px;
-        
-    }
-
-    .development-section {
-        padding: 10%;
-    }
-
-    #email {
-        width:200px;
-    }
-
-    .development-services {
-        font-size: 20px;
-    }
-
-    .steps {
-        font-size: 20px;
-    }
 }

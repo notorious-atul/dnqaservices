@@ -1,0 +1,72 @@
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hide the side menu by default */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 60px;
+    color: white;
+    transition: 0.3s;
+}
+
+
+@media all and (max-width: 1450px) {
+
+   .menu-icon {
+       display: block;
+       position: absolute;
+       right: 200px;
+       top: 1px;
+       font-size: 35px;
+       color: black;
+       cursor: pointer;
+       background-color: transparent;
+   }
+
+   .arrow {
+    left: 40%;
+    top: 60%;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.9);;
+    padding-top: 60px;
+    color: white;
+    transition: 0.3s;
+}
+
+.side-tab {
+    display: flex;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    flex-direction: column;
+    list-style: none;
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 0;
+    font-size: 25px;
+}
+
+.services-dropdown-section {
+    margin-left: 14px;
+    font-size: 26px;
+}
+
+
+.close-icon {
+    font-size: 40px;
+    position: absolute;
+    background-color: transparent;
+    top: 30px;
+    right: 10px;
+    cursor: pointer;
+    color: white; /* Add this line to set the icon color to white */
+}
+}
